@@ -1,20 +1,10 @@
-vibration201312
-===============
 
-Vibration 201312
+TODO 
 
-% TODO 
-
-% 1. DONE: calculate (phi, lambda) = f(mbs, nds)
-
-% 1.1 add damage index (alpha)
-
-% 1.2 insert noise [-3%, +3%]
-
-% 2. calculate obj_val = f(lambda, phi, mbs, nds, alpha)
-
-% 3. calculate Fitness = F(Obj...)
-
-% 4. CCGA = f(gen, chrom., Fitness, Species, ..)
-
-% 5. Multiple runs => test statistics
+1. DONE: calculate (phi, lambda) = f(mbs, nds)
+2. add damage index (alpha)
+3 insert noise [-3%, +3%]
+4. calculate obj_val = f(lambda, phi, mbs, nds, alpha)
+5. calculate Fitness = F(Obj...)
+6. CCGA = f(gen, chrom., Fitness, Species, ..)
+7. Multiple runs => test statistics
