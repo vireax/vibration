@@ -8,27 +8,28 @@ nds = csvread('nds36bar.txt');
 mbs = csvread('mbs36bar.txt');
 alpha = ones(size(mbs,1),1);
 noise = 0.03;
-[eig_vec, eig_val] = vibrate(mbs, nds, alpha);
-[phi, lambda] = measure(eig_vec, eig_val, noise);
-
-beta = ones(size(mbs,1),1);
-% beta(3) = 0.4;
-
-[predicted_eig_vec, predicted_eig_val] = vibrate(mbs, nds, beta);
-
-residual_vec = phi - predicted_eig_vec;
-residual_val = lambda - predicted_eig_val;
-
-disp(residual_vec);
-disp(residual_val);
+[eig_vec, eig_val, ~, ~ ] = vibrate(mbs, nds, alpha);
+[Measured_eig_vector, Measured_eig_value] = measure(eig_vec, eig_val, noise);
+beta = rand(size(mbs,1),1);
+[~, ~, M_reduced, K_reduced] = vibrate(mbs, nds, beta);
+No_dof = size(M_reduced,1);
+R_matrix = zeros(No_dof);
+for i = 1:No_dof
+    R_matrix(:,i) = -Measured_eig_value(i)*M_reduced*Measured_eig_vector(:,i)+K_reduced*Measured_eig_vector(:,i);
+end
+sum_R = sum(sum(R_matrix.*R_matrix));
+% disp(sum_R);
+object_val = sqrt(sum_R);
+disp('objectval = ');
+disp(object_val);
 
 end
+
 
 function [measured_eig_vec, measured_eig_val] = measure(exact_eig_vec, exact_eig_val, noise)
 n = size(exact_eig_vec,1);
 % NOISE = 0.03; % default
 % + or - 3% => total = 6%
-n = size(exact_eig_vec,1);
 if noise~=0
     err_val = ones(n,1) + (2*rand(n,1)-1)*noise;
     err_vec = ones(n) + (2*rand(n)-1)*noise;
@@ -40,7 +41,7 @@ measured_eig_val = err_val.*exact_eig_val;
 measured_eig_vec = err_vec.*exact_eig_vec;
 end
 
-function [eig_vec, eig_val] = vibrate(mbs, nds, alpha)
+function [eig_vec, eig_val, M, K] = vibrate(mbs, nds, alpha)
 % nodes = [px, py, pz, cx, cy, cz];
 % members = [{start_node}, {end_node}, {density}, {E}, {A}, {alpha}];
 
