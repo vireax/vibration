@@ -1,4 +1,5 @@
 % 20131219
+% Not working: problem at line 573, eig_val does not require sqrt() function for future use
 % Vibration based damage detection for 3D truss structures
 
 function ccga_3d()
