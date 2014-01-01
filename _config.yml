@@ -1,5 +1,7 @@
 name: Vibration
 markdown: redcarpet
 pygments: true
+destination: ./vibration/
 permalink: /vibration/:year-:month-:day-:title
+
 
