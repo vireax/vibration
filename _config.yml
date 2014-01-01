@@ -1,5 +1,5 @@
 name: Vibration
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 relative_permalinks: true
 permalink: /:year:month:day/:title.html
