@@ -3,9 +3,3 @@ markdown: redcarpet
 pygments: true
 relative_permalinks: true
 permalink: /:year-:month-:day-:title
-baseurl: http://vireax.github.io
-url: http://vireax.github.io
-
-
-
-
