@@ -333,6 +333,8 @@ footer {
 	padding-left: 50px;
 }
 
+li span.index-post-date {width:7em;}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
