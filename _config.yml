@@ -1,7 +1,6 @@
 name: Vibration
 markdown: redcarpet
 pygments: true
-permalink: /:year-:month-:day-:title
 relative_permalinks: false
 
 
