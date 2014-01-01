@@ -2,7 +2,7 @@ name: Vibration
 markdown: redcarpet
 pygments: true
 permalink: /vibration/:year-:month-:day-:title
-relative_permalinks: false
+relative_permalinks: true
 baseurl: http://vireax.github.io
 url: http://vireax.github.io
 
