@@ -2,5 +2,5 @@ name: Vibration
 markdown: redcarpet
 pygments: true
 relative_permalinks: true
-permalink: date
+permalink: /:year:month:day-:title.html
 baseurl: /vibration
