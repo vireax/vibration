@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello world!"
-date:   2013-12-31 11:56:07
+date:   2013-12-19 11:56:07
 ---
 
 Sample text
