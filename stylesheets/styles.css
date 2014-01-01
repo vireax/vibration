@@ -333,7 +333,7 @@ footer {
 	padding-left: 50px;
 }
 
-li span.index-post-date {width:7em;}
+li span.index-post-date {display:inline-block; width:7em;}
 
 @media print, screen and (max-width: 960px) {
 
