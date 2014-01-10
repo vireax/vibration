@@ -25,8 +25,8 @@ clear all;
 close all;
 clc
 % 3 bars structure
-nds = csvread('nds36bar.txt');
-mbs = csvread('mbs36bar.txt');
+nds = csvread('nds36bars.txt');
+mbs = csvread('mbs36bars.txt');
 
 % % 3 bars structure
 % nds = csvread('nodes.txt');
