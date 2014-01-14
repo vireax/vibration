@@ -7,13 +7,13 @@ Predict damage in 2D and 3D truss structures
 
 ### Tasks
 * 2D
-** Case 1: \alpha = 1
-** Case 2: \alpha != 1
-** Case 3: \alpha != 1
+  * Case 1: \alpha = 1
+  * Case 2: \alpha != 1
+  * Case 3: \alpha != 1
 * 3D
-** Case 1: \alpha = 1
-** Case 2: \alpha != 1
-** Case 3: \alpha != 1
+  * Case 1: \alpha = 1
+  * Case 2: \alpha != 1
+  * Case 3: \alpha != 1
 
 ### Summary table
 * \alpha vs. \beta for each case
@@ -29,13 +29,13 @@ Effect of measurement noises on the prediction (\beta)
 
 ### Tasks
 * 2D
-** Case 1: \alpha = 1
-** Case 2: \alpha != 1
-** Case 3: \alpha != 1
+  * Case 1: \alpha = 1
+  * Case 2: \alpha != 1
+  * Case 3: \alpha != 1
 * 3D
-** Case 1: \alpha = 1
-** Case 2: \alpha != 1
-** Case 3: \alpha != 1
+  * Case 1: \alpha = 1
+  * Case 2: \alpha != 1
+  * Case 3: \alpha != 1
 
 ### Summary table
 * residual = Sum of sqare (alpha_i - beta_i)
