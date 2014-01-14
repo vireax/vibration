@@ -9,7 +9,7 @@ title: CCGA for vibration based damage detection in truss structures
     {% if currentyear != year %}{% unless forloop.first %}</ul>{% endunless %}
       <h2>{{ currentyear }}</h2>
       <ul>{% capture year %}{{currentyear}}{% endcapture %}{% endif %}
-    <li><span class="index-post-date">{{ post.date | date_to_string }}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><span class="index-post-date">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}</ul>
   <h2>Results</h2>
   <h3>2D truss</h3>
