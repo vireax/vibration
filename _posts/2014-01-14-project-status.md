@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Project status"
-date:   2014-01-02 14:28:00
+date:   2014-01-14 14:28:00
 ---
 
 ## Back to the main objective
