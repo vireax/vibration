@@ -1,5 +1,6 @@
 name: Vibration
 markdown: kramdown
 pygments: true
-permalink: /:year:month:day/:title.html
-baseurl: http://vireax.github.io
+relative_permalinks: true
+permalink: /:year/:month/:day/:title.html
+baseurl: /vibration
