@@ -231,10 +231,6 @@ header {
 }
 
 p.header {
-	font-size: 16px;
-}
-
-h1.header {
 	font-family: Arvo, sans-serif;
 	font-size: 30px;
 	font-weight: 300;
@@ -244,7 +240,7 @@ h1.header {
 }
 
 
-h1.header, a.header, a.name, header a{
+p.header, a.header, a.name, header a{
 	color: #fff;
 }
 
@@ -330,10 +326,25 @@ footer {
   float:left;
   position:fixed;
   bottom:10px;
-	padding-left: 50px;
+padding-left: 50px;
 }
 
-li span.index-post-date {display:inline-block; width:7em;}
+.index-post-date {
+	display:inline-block;
+	width:6em;
+	text-align:right;
+	margin-right:2em;	
+}
+ul.list-of-posts{list-style:none;}
+#accordion .ui-widget {  font-size:1em;}
+#accordion .ui-helper-reset{	line-height:1.8;}
+#page-navigation {clear:all;}
+#page-navigation div.left {float:left;}
+#page-navigation div.right {float:right;}
+div.pagination {text-align:center}
+div.pagination .page_number {}
+div.pagination .previous{float:right;}
+div.pagination .next{float:left;}
 
 @media print, screen and (max-width: 960px) {
 
@@ -420,4 +431,5 @@ li span.index-post-date {display:inline-block; width:7em;}
     font-size:12pt;
     color:#444;
   }
+  header, footer {display:none;}
 }
