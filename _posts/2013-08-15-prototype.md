@@ -53,7 +53,7 @@ function f02 = GA(loop)
 
 % f02 = 'test_f02';
 f02 = rand(loop,10)
-</cod></pre>
+</code></pre>
 
 <img src="http://vibration.ximplex.info/_/rsrc/1376557090371/notes/20130815prototype/20130815_fig1.png" />
 
