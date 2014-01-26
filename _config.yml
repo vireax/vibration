@@ -2,6 +2,6 @@ name: Vibration
 markdown: kramdown
 pygments: true
 relative_permalinks: true
-permalink: /:year/:month/:day/:title.html
+permalink: /:year-:month-:day-:title.html
 baseurl: /vibration
 paginate: 20
