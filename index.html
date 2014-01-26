@@ -4,24 +4,51 @@ title: CCGA for vibration based damage detection in truss structures
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}{% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
-    {% if currentyear != year %}{% unless forloop.first %}</ul>{% endunless %}
-      <h2>{{ currentyear }}</h2>
-      <ul>{% capture year %}{{currentyear}}{% endcapture %}{% endif %}
-    <li><span class="index-post-date">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}</ul>
-  <h2>Results</h2>
-  **2D truss**
-  <ul>
-    <li>Case 1: 11 bars structure, undamaged</li>
-    <li>Case 2: 11 bars structure, damaged</li>
-    <li>Case 3: 11 bars structure, damaged</li>
-  </ul>
-  **3D truss**
-  <ul>
-    <li><a href="http://vireax.github.io/vibration/truss36bars/">36 bars truss, undamaged</a></li>
-    <li>damaged</li>
-    <li>damaged</li>
-  </ul>
+  <h1>CCGA for Vibration</h1>
+  
+{% if paginator.page == 1 %}
+    <h2>Project description</h2>
+This project aims to solve the problem of vibration based damage detection in truss structure. By using co-operative co-evolutionary genetic algorithms, the author expect faster and more accurate optimization than conventional genetic algorithms. 
+
+The current status is in programming stage. I'm rewriting the draft of each chapter. Previous notes were also imported into this site to explore possible path during the research. 
+  
+    <h2>Results</h2>
+In progress...
+<ul>
+<li>2D truss, 11 elements (Rao,2004): a) undamaged, b) partially damaged, c) missing member 10</li>
+<li>3D truss, 36 elements (Nam Il Kim, 2013): a) <a href="http://vireax.github.io/vibration/truss36bars/">undamaged</a>, b) damaged (?) c) damaged (?) </li>  
+</ul>
+{% endif %}
+
+<h2>Notes</h2>
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <!--a href="/page{{ paginator.previous_page }}" class="previous">Previous</a-->
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">Newer</a>
+  {% else %}    <span class="previous">Newer</span>  
+  {% endif %}
+  
+  {% if paginator.next_page %}    
+    <!--a href="/page{{ paginator.next_page }}" class="next">Next</a-->
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Older</a>
+  {% else %}    <span class="next">Older</span>  
+  {% endif %}
+  
+  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <hr>
+</div>
+{% endif %}
+
+<!-- This loops through the paginated posts -->
+  <ul class="list-of-posts">
+{% for post in paginator.posts %}
+<li>
+    <span class="index-post-date">{{ post.date | date_to_string }}</span> &raquo;  
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+ </ul>
+
 </div>
