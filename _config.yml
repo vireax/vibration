@@ -4,4 +4,4 @@ pygments: true
 relative_permalinks: true
 permalink: /:year/:month/:day/:title.html
 baseurl: /vibration
-paginate: 5
+paginate: 20
