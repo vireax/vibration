@@ -21,8 +21,8 @@ Chi_square (critical_val, p) : table to summarize all simulations
 
 This means that 49 (7x7) simulations are needed to get this table, multiplied by number of repetitions (3 or 5 or 7 if necessary). The degree of freedom for chi square test is therefore (nb-members -1) x (nb-repetition -1). The expected values are \alpha.
 
-* $$ \epsilon_\lambda = [-3%,+3%] $$
-* $$ \epsilon_\phi = [-3%,+3%] $$
+* $$ \epsilon_\lambda $$ = <code>[-3%,+3%] </code>
+* $$ \epsilon_\phi $$ = <code>[-3%,+3%] </code>
 
 For one case, eg. err-lambda = 2%, err_phi = -1%
 <pre><code>
