@@ -1,12 +1,27 @@
 ---
-layout: default
-title: Chapter 1
+layout: page
+title: Chapter 1 INTRODUCTION
 ---
 
-## Chapter 1 : Introduction
+## Background
+* CCGA was proven better than GA
+* GA was used to solve vibration based damage detection
+* CCGA should be able to solve damage detection problems
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel porttitor lectus. Integer sodales tincidunt nisi sed fermentum. Morbi eget nulla quis arcu sagittis dictum. Etiam ligula leo, dapibus eu elit sed, fringilla consequat eros. Aliquam ipsum est, fringilla a ante ac, sagittis dignissim dui. Nunc condimentum posuere rhoncus. Vivamus porttitor, dui et aliquam posuere, urna tortor ultricies est, at placerat elit tortor non ipsum. Donec condimentum magna sed ipsum ultricies interdum.
+## Objectives
+* Predict damage 
+* Predict damage with experimental noise
 
-Testing LaTeX
+## Scope
+* Structure: 2D and 3D truss
+* Noise: between -3% and +3% in $$ \lambda $$ and $$ phi $$
 
-$$ \begin{aligned} \dot{x} & = \sigma(y-x) \\ \dot{y} & = \rho x - y - xz \\ \dot{z} & = -\beta z + xy \end{aligned} $$
+## Significance
+* higher accuracy
+* ready for practical use
+
+## Review
+* GA
+* CCGA
+* Vibration based damage detection
+* Uncertainty modeling
