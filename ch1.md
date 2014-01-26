@@ -14,7 +14,7 @@ title: Chapter 1 INTRODUCTION
 
 ## Scope
 * Structure: 2D and 3D truss
-* Noise: between -3% and +3% in $$ \lambda $$ and $$ phi $$
+* Noise: between -3% and +3% in $$ \lambda $$ and $$ \phi $$
 
 ## Significance
 * higher accuracy
