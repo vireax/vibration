@@ -83,8 +83,8 @@ Todo...
 
 Todo...
 
-- 2D (2 level table, $$ noise \\in \\\[-3%,+3%\\\] $$ )
-- 3D (2 level table, $$ noise \\in \\\[-3%,+3%\\\] $$ )
+- 2D (2 level table, $$ noise \\in \[-3%,+3%\] $$ )
+- 3D (2 level table, $$ noise \\in \[-3%,+3%\] $$ )
 
 ## Discussion
 
