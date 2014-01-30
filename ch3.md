@@ -41,7 +41,7 @@ Based on Rao et al., 2004
 - 11 members-
 - 1 pivot and 1 roller supports
 - E, ro, A, l
-- 
+
 Cases
 - undamaged $$ \alpha = ones(11) $$
 - partially damaged ( members 3 and 6)
