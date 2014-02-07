@@ -6,7 +6,7 @@ title: Draft
 ## Contents ##
 
 
-### [Chapter 1 Introduction](ch1.html) ###
+#### [Chapter 1 Introduction](ch1.html) ####
  
 *	Background
 *	Objectives
@@ -14,7 +14,7 @@ title: Draft
 *	Significance
 *	Literature reviews
 
-### [Chapter 2 Co-operative Co-evolutionary Genetic Algorithms](ch2.html) ###
+#### [Chapter 2 Co-operative Co-evolutionary Genetic Algorithms](ch2.html) ####
 
 *	Optimization
 *	Genetic algorithms
@@ -22,7 +22,7 @@ title: Draft
 *	Genetic operators
 *	Co-operative co-evolution
   
-### [Chapter 3 Numerical Test](ch3.html) ###
+#### [Chapter 3 Numerical Test](ch3.html) ####
   
 *	Procedure - Obj 1
 *	Procedure - Obj 2
@@ -30,12 +30,12 @@ title: Draft
 	*	Planar truss
 	*	Space truss
 
-### [Chapter 4 Results and Discussions](ch4.html) ###
+#### [Chapter 4 Results and Discussions](ch4.html) ####
  
 *	Result to objective 1
 *	Result to objective 2
 
-### [Chapter 5 Conclusion](ch5.html) ###
+#### [Chapter 5 Conclusion](ch5.html) ####
 
 
 ## Todo ##
