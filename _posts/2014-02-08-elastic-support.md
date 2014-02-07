@@ -36,7 +36,7 @@ Based on superposition method, the global stiffness of the structure becomes <sp
 
 In case 3 spring elements are added to ith node
 
-<div> $$ k_i =  \begin{Bmatrix}k_x \\k_y \\k_z \end{Bmatrix} $$ </div>
+<div> $$ k_{spring} =  \begin{Bmatrix}k_x \\k_y \\k_z \end{Bmatrix} $$ </div>
 
 These 3 values will inclue directly into the diagonal terms of global stiffness corresponding to elements i without disturbing local stiffness of other elements. To prove this claim, each spring element are parallel to each axis, and therefore, only one term of Cx or Cy or Cz can be equal to 1. The other ends of the spring are considered fixed, leaving therefore rows and colums 4,5,6 unaffecting the stiffness matrix of the structure.
 
@@ -61,6 +61,7 @@ $$</div>
 * Add spring's stiffness on associated nodes' rows and columns, following each axis
 
 To calculate displacement, force, and reaction
+
 * Remove rows and columns relative to undisplaced direction of each nodes
 * Calculate the displacement by displacment method <span>$$ K U = F $$ </span>
 * member's internal force: based on Hook's law
