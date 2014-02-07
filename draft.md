@@ -3,9 +3,6 @@ layout: page
 title: Draft
 ---
 
-## Contents ##
-
-
 #### [Chapter 1 Introduction](ch1.html) ####
  
 *	Background
