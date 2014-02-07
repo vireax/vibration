@@ -38,10 +38,12 @@ title: CCGA for vibration based damage detection in truss structures
 <!-- This loops through the paginated posts -->
   <ul class="list-of-posts">
 {% for post in paginator.posts %}
+{% unless post.category == "review"%}
 <li>
     <span class="index-post-date">{{ post.date | date_to_string }}</span> &raquo;  
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 </li>
+{% endunless %}
 {% endfor %}
  </ul>
 
