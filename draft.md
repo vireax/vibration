@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: page
 title: draft
 ---
 
 ## Contents ##
 
-1. Chapter 1 Introduction
+
+Chapter 1 Introduction
  
   1.1. Background
 
@@ -17,7 +18,7 @@ title: draft
   
   1.5. Literature reviews
 
-2. Chapter 2 Co-operative Co-evolutionary Genetic Algorithms
+Chapter 2 Co-operative Co-evolutionary Genetic Algorithms
 
   2.1. Optimization
   
@@ -29,7 +30,7 @@ title: draft
   
   2.5. Co-operative co-evolution
   
-3. Chapter 3 Numerical Test
+Chapter 3 Numerical Test
   
   3.1. Procedure - Obj 1
 
@@ -37,14 +38,14 @@ title: draft
 
   3.3. Test cases
 
-    3.3.1. Planar truss
+  3.3.1. Planar truss
     
-    3.3.2. Space truss
+  3.3.2. Space truss
 
-4. Chapter 4 Results and Discussions
+Chapter 4 Results and Discussions
  
   4.1. Result to objective 1
 
   4.2. Result to objective 2
 
-5. Chapter 5 Conclusion
+Chapter 5 Conclusion
