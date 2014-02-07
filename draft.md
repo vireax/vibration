@@ -1,12 +1,12 @@
 ---
 layout: page
-title: draft
+title: Draft
 ---
 
 ## Contents ##
 
 
-Chapter 1 Introduction
+### [Chapter 1 Introduction](ch1.html) ###
  
   1.1. Background
 
@@ -18,7 +18,7 @@ Chapter 1 Introduction
   
   1.5. Literature reviews
 
-Chapter 2 Co-operative Co-evolutionary Genetic Algorithms
+### [Chapter 2 Co-operative Co-evolutionary Genetic Algorithms](ch2.html) ###
 
   2.1. Optimization
   
@@ -30,7 +30,7 @@ Chapter 2 Co-operative Co-evolutionary Genetic Algorithms
   
   2.5. Co-operative co-evolution
   
-Chapter 3 Numerical Test
+### [Chapter 3 Numerical Test](ch3.html) ###
   
   3.1. Procedure - Obj 1
 
@@ -42,10 +42,18 @@ Chapter 3 Numerical Test
     
   3.3.2. Space truss
 
-Chapter 4 Results and Discussions
+### [Chapter 4 Results and Discussions](ch4.html) ###
  
   4.1. Result to objective 1
 
   4.2. Result to objective 2
 
-Chapter 5 Conclusion
+### [Chapter 5 Conclusion](ch5.html) ###
+
+
+## Todo ##
+
+* program elastic support
+* draft ch3
+* draft ch4
+* submit all
