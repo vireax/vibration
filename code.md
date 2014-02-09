@@ -11,12 +11,13 @@ Contents:
 
 ## 1. Calculation of modal properties
 
+Source: [https://github.com/vireax/vibration/tree/master/201402](https://github.com/vireax/vibration/tree/master/201402)
+
 ### 1.0. Create 2 input files
 
-Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
+` nds.txt ` \: Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
 
 <pre><code>
-
 0,	0,	3.04,	0,	0,	0,	0,	0,	0
 3.04,	0,	3.04,	0,	0,	0,	0,	0,	0
 3.04,	3.04,	3.04,	0,	0,	0,	0,	0,	0
@@ -29,13 +30,11 @@ Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
 3.04,	0,	0,	1,	1,	1,	0,	0,	0
 3.04,	3.04,	0,	1,	1,	1,	0,	0,	0
 0,	3.04,	0,	1,	1,	1,	0,	0,	0
-
 </code></pre>
 
-Members = start, end, density, modulus, section
+` mbs.txt ` \: Members = start, end, density, modulus, section
 
 <pre><code>
-
 1,	5,  7860, 70e6, 0.001
 2,	6,  7860, 70e6, 0.001
 3,	7,  7860, 70e6, 0.001
@@ -43,12 +42,7 @@ Members = start, end, density, modulus, section
 2,	5,  7860, 70e6, 0.001
 ...
 ...
-
-7,	8,  7860, 70e6, 0.001
-5,	8,  7860, 70e6, 0.001
-5,	7,  7860, 70e6, 0.001
 6,	8,  7860, 70e6, 0.001
-
 </code></pre>
 
 ### 1.1. Read input file from nodes and elements
