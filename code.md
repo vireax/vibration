@@ -3,7 +3,11 @@ layout: page
 title: Programming walkthrough
 ---
 
-<div class="toc">TOC: [modal properties](#calculation-of-modal-properties) - [damage detection](#damage-indetification) - [noise](#noise)</div>
+Contents:
+
+* [modal properties](#calculation-of-modal-properties) 
+* [damage detection](#damage-indetification)
+* [noise](#noise)
 
 ## 1. Calculation of modal properties
 
