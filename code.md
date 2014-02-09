@@ -15,7 +15,7 @@ Source: [https://github.com/vireax/vibration/tree/master/201402](https://github.
 
 ### 1.0. Create 2 input files
 
-` nds.txt ` \: Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
+`nds.txt` \: Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
 
 <pre><code>
 0,	0,	3.04,	0,	0,	0,	0,	0,	0
@@ -32,7 +32,7 @@ Source: [https://github.com/vireax/vibration/tree/master/201402](https://github.
 0,	3.04,	0,	1,	1,	1,	0,	0,	0
 </code></pre>
 
-` mbs.txt ` \: Members = start, end, density, modulus, section
+`mbs.txt` \: Members = start, end, density, modulus, section
 
 <pre><code>
 1,	5,  7860, 70e6, 0.001
@@ -111,12 +111,12 @@ end
 
 ### 1.3. Push stiffness of elastic support to the structure's stiffness
 
-20140209  ` vibrate.m `
+20140209  `vibrate.m`
 
 To include the effect of spring element, the stiffness of the spring on the assigned node will be included using superposition method. Therefore, the structure's stiffness is calculated as unrelated to the elastic support, the springs' stiffness will be included before elimination of rows and columns associated constrained nodes.
 
-* With input file (csv)   ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz `
-* With external forces, 3 more columns are needed  ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz `
+* With input file (csv)   `nodes = px, py, pz, cx, cy, cz, kx, ky, kz`
+* With external forces, 3 more columns are needed  `nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz`
 
 {% highlight matlab %}
 
