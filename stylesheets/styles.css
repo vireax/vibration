@@ -330,7 +330,7 @@ padding-left: 50px;
 }
 
 /* Custom */
-.toc {position:fixed, top:0; padding:1em; width:auto; background:#f7f7f7; }
+.toc { padding:1em; background:#fff; position:fixed, top:0; font-size:small;}
 .index-post-date {
 	display:inline-block;
 	width:6em;
