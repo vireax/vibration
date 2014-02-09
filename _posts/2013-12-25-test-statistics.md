@@ -21,10 +21,10 @@ Extreme cases will be tested first:( (-3%, -3%), (3%, 3%), (-3%, +3%) and (3%, -
 
 This means that 49 (7x7) simulations are needed to get this table, multiplied by number of repetitions (3 or 5 or 7 if necessary). The degree of freedom for chi square test is therefore (nb-members -1) x (nb-repetition -1). The expected values are \alpha.
 
-* <div>$$ \epsilon_\lambda  = [-3%,+3%] $$</div>
-* <div>$$ \epsilon_\phi = [-3%,+3%] $$</div>
+* <div>$$ \epsilon\_\lambda  = \[-3%,+3%\] $$</div>
+* <div>$$ \epsilon\_\phi = \[-3%,+3%\] $$</div>
 
-For one case, eg.  <div>$$ \epsilon_\lambda = 2% and \epsilon_\phi = -1% $$ </div>
+For one case, eg.  <div>$$ \epsilon\_\lambda = 2% and \epsilon\_\phi = -1% $$ </div>
 <pre><code>
 \beta vs. \test_cases, 
 .... , test 1,  test 2,  test 3, ....,  test n
