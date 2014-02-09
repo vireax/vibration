@@ -7,14 +7,14 @@ title: Programming walkthrough
 
 ### Read input file from nodes and elements
 
-{% highlight %}
+<pre><code>
     nds = csvread('nds.txt');
     mbs = csvread('mbs.txt');
-{% endhighlight %}
+</code></pre>
 
 ### Calculate stiffness and mass matrix
 
-* Init structure's  stiffness and mass matrix ` size = 3*nb_nds `
+* Init structure's  stiffness and mass matrix `size = 3*nb_nds`
 * Scan each members
 * Retrieve nodes number
 * Retrieve nodes position
@@ -73,26 +73,26 @@ end
 
 To include the effect of spring element, the stiffness of the spring on the assigned node will be included using superposition method. Therefore, the structure's stiffness is calculated as unrelated to the elastic support, the springs' stiffness will be included before elimination of rows and columns associated constrained nodes.
 
-* With input file (csv)   ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz `
-* With external forces, 3 more columns are needed  ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz `
+* With input file (csv)   `nodes = px, py, pz, cx, cy, cz, kx, ky, kz`
+* With external forces, 3 more columns are needed  `nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz`
 
-{% highlight matlab %}
-for i = 1: nb_nds
-    % retrieve kx, ky, kz from node i
-    kx = nds(i, 7);
-    ky = nds(i, 8);
-    kz = nds(i, 9);
-    % push values to the global stiffness matrix, in diagonal terms
-    K (3*i-2, 3*i-2) = K(3*i-2, 3*i-2) + kx;
-    K (3*i-1, 3*i-1) = K (3*i-1, 3*i-1) + ky;
-    K (3*i, 3*i) = K (3*i, 3*i)+ kz;
-end
-{% endhighlight %}
-
+```     
+    for i = 1: nb_nds
+        % retrieve kx, ky, kz from node i
+        kx = nds(i, 7);
+        ky = nds(i, 8);
+        kz = nds(i, 9);
+        % push values to the global stiffness matrix, in diagonal terms
+        K (3*i-2, 3*i-2) = K(3*i-2, 3*i-2) + kx;
+        K (3*i-1, 3*i-1) = K (3*i-1, 3*i-1) + ky;
+        K (3*i, 3*i) = K (3*i, 3*i)+ kz;
+    end
+```
 
 ### Remove rows and colums of constrained nodes
 
 {% highlight matlab %}
+
     % Reduce K and M 
     % If elastic support is attached, the node is not constrained
     temp = nds(:, 4:6);             % pull constrained directions
@@ -102,16 +102,19 @@ end
     M(:,key)=[];
     K(key,:)=[];
     K(:,key)=[];
+    
 {% endhighlight %}
 
 ### Calculate modal properties
 
 
 {% highlight matlab %}
+
     [phi, w2] = eig(M\K);
     %  eig_val = sqrt(diag(w2)); => Wrong
     eig_val = diag(w2);
     eig_vec = phi;
+    
 {% endhighlight %}
 
 ## Damage indetification ##
