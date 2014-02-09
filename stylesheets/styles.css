@@ -164,16 +164,17 @@ code, pre {
 	/*
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color:#000;
-  font-size:14px;*/
+  font-size:14px;
+  background:#fff;*/
   
   font-family:courier, monospace;
   font-size:small;
-  background:#fff;
+  background:#431;
   color: rgb(181, 232, 83);
 }
 
 pre {
-	padding: 4px 12px;
+	padding: 1em 12px;
   /* background: #FDFEFB; */
   border-radius:4px;
   border:1px solid #D7D8C8;
