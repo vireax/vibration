@@ -7,10 +7,12 @@ title: Programming walkthrough
 
 ### Read input file from nodes and elements
 
-<pre><code>
-    nds = csvread('nds.txt');
-    mbs = csvread('mbs.txt');
-</code></pre>
+{% highlight matlab %}
+
+nds = csvread('nds.txt');
+mbs = csvread('mbs.txt');
+
+{% endhighlight %}
 
 ### Calculate stiffness and mass matrix
 
@@ -63,8 +65,8 @@ for i = 1:nb_mbs
     
     %  for 2D, http://fsinet.fsid.cvut.cz/en/u2052/node137.html 
 end
-{% endhighlight %}
 
+{% endhighlight %}
 
 
 ### Push stiffness of elastic support to the structure's stiffness
@@ -76,32 +78,34 @@ To include the effect of spring element, the stiffness of the spring on the assi
 * With input file (csv)   `nodes = px, py, pz, cx, cy, cz, kx, ky, kz`
 * With external forces, 3 more columns are needed  `nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz`
 
-```     
-    for i = 1: nb_nds
-        % retrieve kx, ky, kz from node i
-        kx = nds(i, 7);
-        ky = nds(i, 8);
-        kz = nds(i, 9);
-        % push values to the global stiffness matrix, in diagonal terms
-        K (3*i-2, 3*i-2) = K(3*i-2, 3*i-2) + kx;
-        K (3*i-1, 3*i-1) = K (3*i-1, 3*i-1) + ky;
-        K (3*i, 3*i) = K (3*i, 3*i)+ kz;
-    end
-```
+{% highlight matlab %}  
+
+for i = 1: nb_nds
+    % retrieve kx, ky, kz from node i
+    kx = nds(i, 7);
+    ky = nds(i, 8);
+    kz = nds(i, 9);
+    % push values to the global stiffness matrix, in diagonal terms
+    K (3*i-2, 3*i-2) = K(3*i-2, 3*i-2) + kx;
+    K (3*i-1, 3*i-1) = K (3*i-1, 3*i-1) + ky;
+    K (3*i, 3*i) = K (3*i, 3*i)+ kz;
+end
+    
+{% endhighlight %}
 
 ### Remove rows and colums of constrained nodes
 
 {% highlight matlab %}
 
-    % Reduce K and M 
-    % If elastic support is attached, the node is not constrained
-    temp = nds(:, 4:6);             % pull constrained directions
-    temp = reshape(temp', 1, []);   % flatten the array
-    key = find(temp);               % index non zero element
-    M(key,:)=[];
-    M(:,key)=[];
-    K(key,:)=[];
-    K(:,key)=[];
+% Reduce K and M 
+% If elastic support is attached, the node is not constrained
+temp = nds(:, 4:6);             % pull constrained directions
+temp = reshape(temp', 1, []);   % flatten the array
+key = find(temp);               % index non zero element
+M(key,:)=[];
+M(:,key)=[];
+K(key,:)=[];
+K(:,key)=[];
     
 {% endhighlight %}
 
@@ -110,10 +114,10 @@ To include the effect of spring element, the stiffness of the spring on the assi
 
 {% highlight matlab %}
 
-    [phi, w2] = eig(M\K);
-    %  eig_val = sqrt(diag(w2)); => Wrong
-    eig_val = diag(w2);
-    eig_vec = phi;
+[phi, w2] = eig(M\K);
+%  eig_val = sqrt(diag(w2)); => Wrong
+eig_val = diag(w2);
+eig_vec = phi;
     
 {% endhighlight %}
 
