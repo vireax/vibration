@@ -169,14 +169,14 @@ code, pre {
   
   font-family:courier, monospace;
   font-size:small;
-  background:#431;
+  background:#333;
   color: rgb(181, 232, 83);
 }
 
 pre {
-	padding: 1em 12px;
+  padding: 1em 12px;
   /* background: #FDFEFB; */
-  border-radius:4px;
+  /* border-radius:4px; */
   border:1px solid #D7D8C8;
   overflow: auto;
   overflow-y: hidden;
