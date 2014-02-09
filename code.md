@@ -7,7 +7,7 @@ title: Programming walkthrough
 
 ### Read input file from nodes and elements
 
-``` matlab
+``` highlight
 
 nds = csvread('nds.txt');
 mbs = csvread('mbs.txt');
@@ -23,7 +23,8 @@ mbs = csvread('mbs.txt');
 * Calculate local stiffness
 * Calculate global stiffness, using transformation of coordinates
 
-``` matlab
+``` highlight
+
 nb_nds = size(nds,1);   
 nb_mbs = size(mbs,1); 
 M = zeros(3*nb_nds);    
@@ -76,7 +77,7 @@ To include the effect of spring element, the stiffness of the spring on the assi
 * With input file (csv)   ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz `
 * With external forces, 3 more columns are needed  ` nodes = px, py, pz, cx, cy, cz, kx, ky, kz, fx, fy, fz `
 
-``` matlab
+``` hightlight
 
 for i = 1: nb_nds
     % retrieve kx, ky, kz from node i
@@ -88,11 +89,12 @@ for i = 1: nb_nds
     K (3*i-1, 3*i-1) = K (3*i-1, 3*i-1) + ky;
     K (3*i, 3*i) = K (3*i, 3*i)+ kz;
 end
+
 ```
 
 ### Remove rows and colums of constrained nodes
 
-``` matlab
+``` highlight
 
 % Reduce K and M 
 % If elastic support is attached, the node is not constrained
@@ -108,7 +110,7 @@ K(:,key)=[];
 
 ### Calculate modal properties
 
-``` matlab
+``` highlight
 
 [phi, w2] = eig(M\K);
 %  eig_val = sqrt(diag(w2)); => Wrong
