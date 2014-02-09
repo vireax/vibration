@@ -6,9 +6,10 @@
 
 function vibrate()
 clear all; close all; clc;
+
 % 3 bars structure
-nds = csvread('nds.txt');
-mbs = csvread('mbs.txt');
+nds = csvread('nds2d.txt');
+mbs = csvread('mbs2d.txt');
 
 % function [eig_vec, eig_val, M, K] = vibrate(mbs, nds, alpha)
 % disp('size alpha'); disp(size(alpha));
@@ -24,9 +25,9 @@ alpha = ones(nb_mbs,1);
 for i = 1:nb_mbs
     ndi = mbs(i, 1);   %   start node
     ndj = mbs(i, 2);   %   end node
-    ro   = mbs(i, 3);   %   density
-    E    = mbs(i, 4);   %   modulus
-    A    = mbs(i, 5);   %   cross-section
+    ro  = mbs(i, 3);   %   density
+    E   = mbs(i, 4);   %   modulus
+    A   = mbs(i, 5);   %   cross-section
     % alpha : damage index will be inserted here
     
     % stiffness [k] and mass [m] of each member
@@ -74,14 +75,40 @@ M(key,:)=[];
 M(:,key)=[];
 K(key,:)=[];
 K(:,key)=[];
+% disp(M(1,1));
 
-[phi, w2] = eig(M\K);
+% [phi, w2] = eig(M\K);
 %%%%%%%%%%%%%%%%%%%% eig_val = sqrt(diag(w2)); => Wrong
-eig_val = diag(w2);
-eig_vec = phi;
+% eig_val = diag(w2);
+% eig_vec = phi;
 
-disp(eig_val);
-disp(eig_vec);
-K
-nds(:,[7,8,9])
+% disp(eig_val);
+% disp(eig_vec);
+% nds(:,[7,8,9])
+
+% -----------------------
+% calculate internal force
+F = nds(:,10:12); % pull from nodes input
+F = reshape(F',1,[]); % flatten 
+F = F'  ; % rebuild to column vector
+F(key) = [];
+
+U_temp = K\F;
+U = zeros(3*nb_nds,1);
+j = 1;
+for i = 1: nb_nds*3
+    if any(key(:)== i)
+        U(i) = 0;
+    else
+        U(i) = U_temp(j);
+        j = j+1;
+    end
+end
+
+U = reshape(U', 3, []);
+U = U';
+
+%   display in milimeter
+disp('Displacement');
+disp(U*1000); 
 end
