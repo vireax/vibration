@@ -15,7 +15,7 @@ Contents:
 
 Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
 
-{% highlight %}
+<pre><code>
 
 0,	0,	3.04,	0,	0,	0,	0,	0,	0
 3.04,	0,	3.04,	0,	0,	0,	0,	0,	0
@@ -30,11 +30,11 @@ Nodes = px, py, pz, cx, cy, cz, kx, ky, kz
 3.04,	3.04,	0,	1,	1,	1,	0,	0,	0
 0,	3.04,	0,	1,	1,	1,	0,	0,	0
 
-{% endhighlight %}
+</code></pre>
 
 Members = start, end, density, modulus, section
 
-{% highlight %}
+<pre><code>
 
 1,	5,  7860, 70e6, 0.001
 2,	6,  7860, 70e6, 0.001
@@ -49,7 +49,7 @@ Members = start, end, density, modulus, section
 5,	7,  7860, 70e6, 0.001
 6,	8,  7860, 70e6, 0.001
 
-{% endhighlight %}
+</code></pre>
 
 ### 1.1. Read input file from nodes and elements
 
