@@ -8,7 +8,7 @@ Statistical tests can be used to validate the result at any step during the cour
 
 In the case of measurement of modal properties with uncertainty, an amount of noise will be introduced into these measurement, and therefore causes the program to predicted less accurately. At a threshold, although CCGA perform better than conventional GA, the prediction will not be reliable at all. Statistical test will be used here whether we should accept or reject the given result. Chi-square test goodness-of-fit may be the closest approach to decide the acceptance criteria.
 
-<pre><code>chi_square = sum of( (square of (expected-value - observed-value)) / observed value)</code></pre>
+<div>$$ \chi^2 = \sum \frac {(Observe - Expected)^2} {Expected} $$</div>
 
 Errors will range from -3% to +3%. However, 2 variables are to be included: frequency and mode shape. Therefore, it will be more appropriate to separate the range of error by these variable, then to observe the variation of the predicted damage later. Any prediction that cause chi_square to exceed the critical value will be rejected, thus the given error cannot be used to predict the damage accurately any more.
 
@@ -16,22 +16,23 @@ Monte Carlo Simulation: it is unnecessary to simulate the measurement because th
 
 Extreme cases will be tested first:( (-3%, -3%), (3%, 3%), (-3%, +3%) and (3%, -3%) ), to ensure that null hypothesis can be rejected somewhere within the chosen range. What if despite these error the prediction still work fine? It means that the prediction invade other given measurement or these errors have not relationship to the variation of the damage prediction. What's next? Someone must verify the mathematical model of the solution for hidden reason.
 
-Chi_square (critical_val, p) : table to summarize all simulations
+<span> $$ \chi^2 (critical value, p) $$</span>: table to summarize all simulations
 
 
 This means that 49 (7x7) simulations are needed to get this table, multiplied by number of repetitions (3 or 5 or 7 if necessary). The degree of freedom for chi square test is therefore (nb-members -1) x (nb-repetition -1). The expected values are \alpha.
 
-* $$ \epsilon_\lambda $$ = <code>[-3%,+3%] </code>
-* $$ \epsilon_\phi $$ = <code>[-3%,+3%] </code>
+* <span>$$ \epsilon_\lambda  = [-3%,+3%] $$</span>
+* <span>$$ \epsilon_\phi = [-3%,+3%] $$</span>
 
-For one case, eg. err-lambda = 2%, err_phi = -1%
+For one case, eg.  <span>$$ \epsilon_\lambda = 2%, \epsilon_\phi = -1% $$ </span>
 <pre><code>
-\beta \test_cases
-test 1 test 2 test 3 test 4
+\beta vs. \test_cases, 
+.... , test 1,  test 2,  test 3, ....,  test n
 \beta_1
 \beta_2
 \beta_n
 </code></pre>
+
 Next:
 
 * ANOVA may be interesting but I need time to learn and to fit output more. I'm not sure yet if I can do anything with regression. 
