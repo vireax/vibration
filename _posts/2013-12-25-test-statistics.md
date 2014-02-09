@@ -24,7 +24,7 @@ This means that 49 (7x7) simulations are needed to get this table, multiplied by
 * <span> $$ \epsilon_\lambda $$ </span> = \[-3%,+3%\]  
 * <span> $$ \epsilon_\phi $$</span>= \[-3%,+3%\] 
 
-For one case, eg.  <span> $$ \epsilon\_\lambda $$ </span> = 2% and $$\epsilon\_\phi $$ = -1% 
+For one case, eg.  <span> $$ \epsilon_\lambda $$ </span> = 2% and $$\epsilon_\phi $$ = -1% 
 
 <pre><code>
 \beta vs. \test_cases, 
