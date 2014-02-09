@@ -23,7 +23,7 @@ mbs = csvread('mbs.txt');
 * Calculate local stiffness
 * Calculate global stiffness, using transformation of coordinates
 
-``` highlight
+{% highlight matlab %}
 
 nb_nds = size(nds,1);   
 nb_mbs = size(mbs,1); 
@@ -63,8 +63,7 @@ for i = 1:nb_mbs
     
     %  for 2D, http://fsinet.fsid.cvut.cz/en/u2052/node137.html 
 end
-
-```
+{% endhighlight %}
 
 
 
