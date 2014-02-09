@@ -5,15 +5,15 @@ title: Programming walkthrough
 
 Contents:
 
-* [modal properties](#calculation-of-modal-properties) 
-* [damage detection](#damage-indetification)
-* [noise](#noise)
+1. [modal properties](#calculation-of-modal-properties) 
+2. [damage detection](#damage-indetification)
+3. [noise](#noise)
 
 ## 1. Calculation of modal properties
 
 ### 1.1. Read input file from nodes and elements
 
-{% highlight matlab %}
+{% highlight matlab lineos %}
 
 nds = csvread('nds.txt');
 mbs = csvread('mbs.txt');
@@ -29,7 +29,7 @@ mbs = csvread('mbs.txt');
 * Calculate local stiffness
 * Calculate global stiffness, using transformation of coordinates
 
-{% highlight matlab %}
+{% highlight matlab lineos %}
 
 nb_nds = size(nds,1);   
 nb_mbs = size(mbs,1); 
