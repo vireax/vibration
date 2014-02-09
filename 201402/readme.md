@@ -80,7 +80,7 @@ Displacement 2D
 ```
 
 ```
-Displacement
+Displacement 3D
     5.4107    5.4107   -0.3576
     4.0803    3.5069   -0.1693
     3.8293    3.8293   -1.6373
