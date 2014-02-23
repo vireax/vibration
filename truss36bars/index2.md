@@ -15,15 +15,14 @@ date: 2014-02-24
 #graphdiv .dygraph-ylabel { font-size: 18px; text-shadow: -2px 2px 2px gray; }
 /*.chart { border: 1px dashed black; margin: 5px 5px 5px 50px; padding: 2px; }	*/
 .chart { border: 1px dashed black; margin: 0; padding: 0px; }	
-#labels {border-bottom:1px solid #aaa;
-	width:100px;margin:0; padding:10px;
-	line-height:1.2em; float:right;}
+#labels {border-bottom:1px solid #aaa;	width:100px;margin:0; 
+padding:10px; font-size:.8em;line-height:1.2em; float:right;}
 
 </style>
 <script type="text/javascript" src="dygraph-combined.js"></script>
 
 <div id="wrap">
-<h1>vibration based damage detection, CCGA, 36 bars truss</h1>
+<h1>Result: 36 bars truss</h1>
 <div><p>Select parts of the chart horizontally to zoom in or double-click to return to original canvas.</p></div>
 <div id="graphdiv" 
 	class="chart" >
@@ -46,8 +45,8 @@ date: 2014-02-24
 	//title: 'Predicted Damage Indexes for 36 bars truss structure',
 	titleHeight:16,
 	labels: ["step","01", "02", "03", "04", "05", "06", "07", "08", "09", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"],
-	width:480,
-	height:600,
+	width:580,
+	height:400,
 	//'Damage Index':{axis:{}},
 	xlabel:'Iteration',
 	ylabel: 'Damage Indexes (BETA)',
