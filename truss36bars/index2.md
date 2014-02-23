@@ -8,7 +8,7 @@ date: 2014-02-24
 /*body { 	background:#fff; 	color:#333; 	text-align:center;
 	font-size:small;	line-height:1.8em; 
 	margin:0em auto;	}*/
-#wrap {width:680px; margin:0 auto;text-align:left;padding:20px 0;background:#fff;} 
+#wrap {width:680px; margin:0 auto;text-align:left;padding:20px 0;background:none;} 
 #graphdiv {background:#fff; padding:0px; border:1px solid #ccc;float:left;}
 #graphdiv .dygraph-label { font-family: Georgia,Verdana,serif; }
 #graphdiv .dygraph-title { font-size: 36px; text-shadow: 2px 2px 2px gray; }
