@@ -8,7 +8,7 @@ date: 2014-02-24
 /*body { 	background:#fff; 	color:#333; 	text-align:center;
 	font-size:small;	line-height:1.8em; 
 	margin:0em auto;	}*/
-#wrap {width:980px; margin:0 auto;text-align:left;padding:20px 0;background:#fff;} 
+#wrap {width:680px; margin:0 auto;text-align:left;padding:20px 0;background:#fff;} 
 #graphdiv {background:#fff; padding:0px; border:1px solid #ccc;float:left;}
 #graphdiv .dygraph-label { font-family: Georgia,Verdana,serif; }
 #graphdiv .dygraph-title { font-size: 36px; text-shadow: 2px 2px 2px gray; }
@@ -16,7 +16,7 @@ date: 2014-02-24
 /*.chart { border: 1px dashed black; margin: 5px 5px 5px 50px; padding: 2px; }	*/
 .chart { border: 1px dashed black; margin: 0; padding: 0px; }	
 #labels {border-bottom:1px solid #aaa;
-	width:200px;margin:0; padding:10px;
+	width:100px;margin:0; padding:10px;
 	line-height:1.2em; float:right;}
 
 </style>
@@ -46,7 +46,7 @@ date: 2014-02-24
 	//title: 'Predicted Damage Indexes for 36 bars truss structure',
 	titleHeight:16,
 	labels: ["step","01", "02", "03", "04", "05", "06", "07", "08", "09", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"],
-	width:680,
+	width:480,
 	height:600,
 	//'Damage Index':{axis:{}},
 	xlabel:'Iteration',
