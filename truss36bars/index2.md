@@ -45,7 +45,7 @@ padding:10px; font-size:.8em;line-height:1.2em; float:right;}
 	//title: 'Predicted Damage Indexes for 36 bars truss structure',
 	titleHeight:16,
 	labels: ["step","01", "02", "03", "04", "05", "06", "07", "08", "09", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36"],
-	width:580,
+	width:540,
 	height:400,
 	//'Damage Index':{axis:{}},
 	xlabel:'Iteration',
