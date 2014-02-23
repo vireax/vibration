@@ -1,6 +1,7 @@
 ---
-layout:default
+layout: default
 title: 36 Bars Truss
+date: 2014-02-24
 ---
 
 <style type="text/css">
