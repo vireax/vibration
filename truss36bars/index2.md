@@ -5,9 +5,9 @@ date: 2014-02-24
 ---
 
 <style type="text/css">
-body { 	background:#fff; 	color:#333; 	text-align:center;
+/*body { 	background:#fff; 	color:#333; 	text-align:center;
 	font-size:small;	line-height:1.8em; 
-	margin:0em auto;	}
+	margin:0em auto;	}*/
 #wrap {width:980px; margin:0 auto;text-align:left;padding:20px 0;background:#fff;} 
 #graphdiv {background:#fff; padding:0px; border:1px solid #ccc;float:left;}
 #graphdiv .dygraph-label { font-family: Georgia,Verdana,serif; }
