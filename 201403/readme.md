@@ -1,0 +1,26 @@
+# March 2014
+===================
+
+## Winkler foundation
+
+The unit of coefficient of subgrade reaction is in [MPa/m] or [N/m^2/m]
+
+## Tests - Objective 1
+
+a. 2D (Rao, 2004)
+  - alpha = ones(11,1)
+  - alpha = ones(11,1), alpha(3) = ... , alpha(6) = ...
+  - alpha = ones(11,1), alpha(10) = 0
+b. 2D (Kim, 2013)
+  - alpha = ones(16,1)
+  - alpha = ones(16,1), alpha(9) = 0.3
+  - alpha = ones(16,1), alpha(5)= 0.4, alpha(13) = 0.3
+c. 3D (Kim, 2013)
+  - alpha = ones(36,1)
+  - alpha = ones(36,1), alpha(13) = 0.4
+  - alpha = ones(36,1), alpha(1) = 0.3, alpha(21) = 0.5
+
+
+## Tests - objective 2
+
+-  Test from -3% to +3%
