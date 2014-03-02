@@ -1,0 +1,263 @@
+\chapter{Numerical Test}
+\thispagestyle{empty}
+
+\section{Objective function}
+
+The objective function will be calculated based on the concept of residual force. From the equation of motion (Eq. \ref{eq:equation of motion}) of dynamics of a multi degree freedom system under free vibration, modal frequency $\{\lambda\}$ and mode shapes $[\nu]$ from the eigenproblem (Eq. \ref{eq:modal properties}). Changes of stiffness (Eq. \ref{eq:stiffness damaged}) due to rediction index or stiffness factors $\{\alpha\}$ cause therefore changes of modal properties $\{\lambda_d\}$ and $[\nu_d]$ (Eq. \ref{eq:modal properties damaged}).  If the predicted stiffness factors are made correctly ($\{\beta\}\simeq\{\alpha\}$), the residual force matrix (\ref{eq:residual force matrix})  should be minimal. Residual vectors $\{R_j\}$ (Eq. \ref{eq:residual force vector}) corresponding to each mode are in function of the design variable $\{\beta\}$ and the parameters discussed above.
+
+\subsection*{Vibration of multi degree freedom system}
+
+The fundamental equation of motion
+\begin{equation}
+\label{eq:equation of motion}
+[m]\{\ddot{x}(t)\}+[k]\{x(t)\} = \{F(t)\}
+\end{equation}
+
+Modal properties
+\begin{equation}
+\label{eq:modal properties}
+[k]\{\nu_j\}-\lambda_j[m]\{\nu_j\} = \{0\}
+\end{equation}
+
+While the physical properties of truss structure 
+\begin{equation}
+[k] = \sum_{i=1}^N{[k]_i} \qquad \mathrm{and} \qquad [m] = \sum_{i=1}^N{[m]_i}, 
+\end{equation}
+
+
+%While the stiffness matrix \cite{inman2001engineering}
+%
+%\begin{equation}
+%[k]_i = \frac{E A}{l}
+%\left[ \begin{matrix}
+%\cos\theta & 0 \\ \sin\theta & 0 \\ 0 & \cos\theta \\ 0 & \sin\theta
+%\end{matrix}\right]
+%\left[ \begin{matrix}
+%1 & -1 \\ -1 & 1
+%\end{matrix}\right]
+%\left[ \begin{matrix}
+%\cos\theta & sin\theta & 0 & 0 \\
+%0 &  0 & \cos\theta & \sin\theta
+%\end{matrix}\right]
+%\end{equation}
+
+Physical properties of each member in global coordinates
+\begin{alignat}{2}
+& \mathrm{Stiffness} & \qquad & [k]_i = \frac{EA}{l} \: [T]^T\: \left[ \begin{matrix}1 & -1 \\ -1 & 1 \end{matrix}\right]\:[T] \\
+& \mathrm{Mass} & \qquad & [m]_i = \frac{\rho A}{l} \: [?]\:\left[ \begin{matrix}1 & 0 \\ 0 & 1\end{matrix}\right]\:[?]
+\end{alignat}
+
+Knowing transformation matrices
+\begin{alignat}{4}
+& \mathrm{Planar\:truss}  & \qquad &[T] =  
+\left[ \begin{matrix} 
+\lambda_x & \lambda_y & 0 & 0 \\ 0 & 0 & \lambda_x & \lambda_y 
+\end{matrix} \right] \\
+& \mathrm{Space\:truss}  & \qquad &[T] =  
+\left[ \begin{matrix}
+\lambda_x & \lambda_y & \lambda_z & 0 & 0 & 0 \\
+0 & 0 & 0 & \lambda_x & \lambda_y & \lambda_z 
+\end{matrix}\right]  
+\end{alignat}
+
+$\lambda_x=\theta_x, \lambda_y=\theta_y,$ and $ \lambda_z=\theta_z$ are angles between the truss element and each axis of the global coordinate $x, y, z$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{truss2d.png}
+\caption{Transoformation of coordinates of a truss element}
+\end{figure}
+
+
+\subsection*{Under damage condition}
+
+Under damage $\alpha_i (i = 1, 2, ..., N)$, assume that only stiffness was changed
+
+\begin{equation}
+\label{eq:stiffness damaged}
+[k_d] = \sum_{i=1}^N{\alpha_i[k]_i}
+\end{equation}
+
+Modal properties of the damaged structure follow the same relation
+\begin{equation}
+\label{eq:modal properties damaged}
+[k_d]\{\nu_{jd}\}-\lambda_{jd}[m]\{\nu_{jd}\} = \{0\}
+\end{equation}
+
+\subsection*{With predicted stiffness factor}
+The residual vector of $j^{th}$ mode in function of predicted damage index or decision variables $\beta_i (i= 1, 2, ..., N)$
+\begin{equation}
+\label{eq:residual force vector}
+\{R_j\} = -\lambda_{jd}[m]\{\nu_{jd}\} +  \sum_{i=1}^m{\beta_i[k]_i}\{\nu_{jd}\}
+\end{equation}
+
+Residual force matrix
+\begin{equation}
+\label{eq:residual force matrix}
+[R] = [\{R_1\} \{R_2\}... \{R_n\}]
+\end{equation}
+
+Objective function
+\begin{equation}
+f(\beta_1, \beta_2, ..., \beta_N) = \sqrt{\sum_{i=1}^{n}{\sum_{j=1}^{n}{R_{ij}^2}}}
+\end{equation}
+where $N$ is the number of elements and $n$ is the number of freedom.
+
+\subsection*{Fitness value}
+The fitness $F_i$ of each individual will be based on minimization problem (Eq. \ref{eq:fitness}). The normalized fitness $NF_i$ (Eq. \ref{eq:norm fitness}) will be finally converted using the average of normalized fitness of individuals in the current population $NF_{avg}$ and a predefined scaling factor $SCF$ (Eq. \ref{eq:scaled fitness}). This fitness scaling technique \cite{goldberg1989} ensure improvement of performance of the search mechanism.
+
+\begin{equation}\label{eq:fitness}
+F_i = -f_i 
+\end{equation}
+\begin{equation}\label{eq:norm fitness}
+NF_i = \left( \frac{F_i - F_{min}}{F_{max}-F_{min}}\right)
+\end{equation}
+\begin{equation}\label{eq:scaled fitness}
+SF_i = \frac{NF_i}{NF_{avg}}\:SCF
+\end{equation}
+
+
+\section{Detection with GA}
+\noindent
+\emph{should not be included if the result will only be compared to \cite{rao2004}}
+
+%Adapted from conventional GA, the calculation is straightforward as a baseline for future comparison. Maximum number of generations is set as the termination condition to avoid infinite loop because the convergence of the fitness value is not known or set \emph{a priori}. This number can vary depending on the accuracy of the prediction. The efficiency of the algorithm can be observed however from the beginning of the convergence of the fitness value. Selection process depends on the evaluation of fitness value, in this case, the determinant of residual force matrix $[R]$. 
+
+\bigskip
+\begin{algorithm}[H]
+ \SetAlgoLined
+ \KwData{Experimental damage $\alpha_i$}
+ \KwResult{Predicted damage $\beta_i$}
+ \KwParm{truss properties}
+ Compute modal properties in damaged structure with $\alpha_i$  \;
+ Initialize random damage indexes $\beta_i$\;
+ \While{gen $<$ MaxGen}{
+  decode parents' chromosome\;
+  calculate the objective value of each individual \;
+  evaluate the fitness value\;
+  apply selection\;
+  apply genetic operator\;
+  offsprings become parents of the next iteration\;
+ }
+ \caption{Genetic Algorithms for damage detection}
+\end{algorithm}
+
+\section{Detection with CCGA}
+CCGA differs from previous technique by dividing the population into sub-population or species where evolution will take place separately. It is expected to predict the damage index more accurately. 
+%Otherwise, the solving procedure or some parameters need to be redefined. 
+
+\bigskip
+\begin{algorithm}[H]
+ \SetAlgoLined
+ \KwData{Experimental damage $\alpha_i$}
+ \KwResult{Predicted damage $\beta_i$}
+% \KwParm{truss properties}
+ Compute modal properties in damaged structure with $\alpha_i$\;
+ Initialize random damage indexes $\beta_i$\;
+ \While{(gen $<$ MaxGen)}{
+ \ForEach{specie}{
+  decode parents' chromosome\;
+  calculate the objective value of each individual\;
+  evaluate fitness value\;
+  apply selection\;
+  apply genetic operator\;
+  offsprings become parents of the next iteration\;
+  }
+ }
+ \caption{CCGA for damage detection}
+\end{algorithm}
+\section{Detection with CCGA and experimental noise}
+
+While experimental noise is introduced into the measurement of modal properties, the accuracy of prediction will not depend on the algorithms alone, but the repeatability of the measurement. Therefore, each case of damage detection requires multiple measurements and each measurement, multiple predictions. 
+
+\emph{ref: not yet included}
+
+
+\bigskip
+\begin{algorithm}[H]
+ \SetAlgoLined
+ \KwData{Experimental damage $\alpha_i$}
+ \KwResult{Predicted damage $\beta_i$ from repeated run}
+ Compute modal properties in damaged structure with $\alpha_i$\ + random noise\;
+ Initialize random damage indexes $\beta_i$\;
+ \ForEach {measured modal properties}{
+  \ForEach {prediction}{
+  	 \While{(gen $<$ MaxGen)}{
+		 \ForEach{specie}{
+			  decode parents' chromosome\;
+			  calculate the objective value of each individual \;
+			  evaluate fitness value\;
+			  apply selection\;
+			  apply genetic operator\;
+			  offsprings become parents of the next iteration\;
+		  }
+	}
+ 	\Return best predicted damage(one run)\;
+  }
+  \Return set of predicted damage\;
+ }
+ \caption{CCGA for damage detection and random noise}
+\end{algorithm}
+
+
+\section{Parameter settings}
+These parameters were used to perform preliminary test with 2D truss structures. It is expected to give reliable result, better than previous works with conventional genetic algorithm \cite{rao2004}. Any adjustment of parameters will be made if numerical test with space truss show significant difference.
+
+The example problem of planar truss structure (Fig. \ref{fig:truss2d_structure}) consists of 11 members attached to 6 nodes, with therefore 9 degrees of freedom. Given the characteristics of each member, modulus of elasticity $E = 207\:GPa $, density $\rho = 7860\:km/m^3$, cross-sectional area $A = 0.0011\:m^2$ and length of each bay $l = 0.75\:m$, three case of damage will be assigned to some members of the structure. The program will predict these damage factors based one the algorithms described in previous sections. 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{truss2d_structure.png}
+\caption{Test problem of planar truss structure}
+\label{fig:truss2d_structure}
+\end{figure}
+
+\paragraph{Chromosome coding} The number of design variables is equal to the number of members of the structure, 11. These are damage factors which range from 0, when member is totally damaged or missing, to 1, when the physical properties is unchanged or undamaged. Real-value coding are used to represent these damage factors because binary coding may require another conversion process.
+
+\paragraph{Stochastic universal sampling} is a development of fitness proportionate selection by  \citet{baker1987}. Rather than selecting $N$ time randomly the candidates while giving probability based on each individual's fitness. This technique is unbiased by dividing N equally spaced pointers to the population, therefore not allowing the fittest members to saturate the candidate space.
+
+\paragraph{Simulate-binary crossover} \cite{deb1994}. . .
+
+\paragraph{Variable-wise polynomial mutation} ?...
+
+\begin{table}[h]
+\caption{Parameter settings}
+\label{parameter_settings}
+\begin{tabularx}{\textwidth}{ p{5cm}X }
+%\hline
+\toprule
+  Parameters & Settings and Values \\
+%  \hline
+\midrule
+Chromosome coding & Real-value chromosome with 11 decision variables\\
+Number of decision variables in a specie & 11 \\
+Number of species & Number of decision variables \\
+Population size & 20 \\
+Number of elite individuals & 2 for every specie \\
+Scaling factor & 2.0 \\
+Selection method & Stochastic universal sampling selection \\
+Crossover method & Simulate-binary crossover ($\eta_c=15$) with probability = 1.0 \\
+Mutation method & Variable-wise polynomial mutation ($\eta_m=20$) with probability = 0.5) \\
+Number of generations & 25 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\section{\emph{Preliminary result}}
+
+........test result of 2D truss.........
+\subsection*{Description of 2D truss}
+%... description + picture + summary
+
+\subsection*{Prediction without noise}
+%... description of the program ...
+%... table of result ...
+
+\subsection*{Prediction with noise}
+%... description of the program . . .
+%. . . table of result by cases . . . 
+\subsection*{Discussion}
+%... Accuracy ...
+%... Reliability
+\subsection*{Expectation}
+%... what to do, what if things goes wrong, what are the conclusion, generalization 
