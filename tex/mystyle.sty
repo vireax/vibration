@@ -1,0 +1,79 @@
+\ProvidesPackage{mystyle}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+%\setlength{\mathindent}{1cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\linespread{1.5}
+\usepackage{graphicx}
+%\setmainfont {Times New Roman}
+\usepackage{float}
+\usepackage[left=1.5in,right=1in, top=1.5in,bottom=1in]{geometry}
+%\usepackage[inline]{enumitem}	% inline list
+%\usepackage{natbib}
+%\usepackage[numbers]{natbib}
+%! Package natbib Error: Bibliography not compatible with author-year citations.
+\usepackage[nosectionbib]{apacite} % raise heading to chapter level
+% let apacite behave as natbib to use \citep
+\usepackage{makerobust}
+\DeclareRobustCommand{\citep}[2][]{\cite[#1]{#2}}
+\DeclareRobustCommand{\citealp}[2][]{\citeNP[#1]{#2}}
+\DeclareRobustCommand{\citet}[2][]{\citeA[#1]{#2}}
+\MakeRobustCommand{\citeauthor}
+\MakeRobustCommand{\citeauthor}
+
+\usepackage{indentfirst}
+\usepackage[linesnumbered, ruled,algochapter,vlined]{algorithm2e} % for listing algorithms
+\SetKwInOut{KwParm}{Parameter}
+
+%\usepackage{listings}	% alternative for code listing
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage[font=normal,labelfont=bf,justification=justified,singlelinecheck=off]{caption}
+\usepackage{booktabs} %\toprule \midrule \bottomrule
+\usepackage{multirow}
+% ? \usepackage{booktabs,caption}
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+\titleformat{\chapter}[display]{\color{black}\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{14pt}{\Large}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{\large}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{\normalsize}
+% connect chapter number and title
+%\titleformat{\chapter}{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\huge}
+%\titleformat{\chapter}[display]
+%  {\normalsize \huge  \color{black}}%
+%  {\flushright\normalsize \color{RoyalRed}%
+%   \MakeUppercase{\chaptertitlename}\hspace{1ex}%
+%   {\fontfamily{mdugm}\fontsize{60}{60}\selectfont\thechapter}}%
+%  {10 pt}%
+%  {\bfseries\huge}%
+%\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+% \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\huge}
+\pagestyle{myheadings} %display only page number
+%\usepackage{setspace}
+%\doublespacing
+%\onehalfspacing
+
+
+%\floatstyle{plaintop}
+%\restylefloat{table}
+%\renewcommand{\abstractname}{Custom Abstract Name}
+\setlength\parindent{0.63in}
+\renewcommand{\labelitemi}{$-$}
+%\usepackage[nottoc, notlof, notlot]{tocbibind} % remove TOC link from TOC
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=2in}%\dimexpr 26pt+0.63in}
+%\usepackage[tableposition=top]{caption} -> not working
+
+\newcommand{\lipsum}{Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, 
+adipiscing vitae, felis.}
+
+% remove page number from first page of chapter
+%\titleformat{\chapter}[display]
+%              {\normalfont\Large\filcenter} % {fmt}                                                                   
+%              {\thechapter}%.\ }              % {label}                                                                 
+%              {1pc}                         % {sep}                                                                   
+%              {\vspace{-1in}\enlargethispage{-0.5in}\thispagestyle{empty}}    % {before}                                    
+
