@@ -1,0 +1,169 @@
+\chapter{Co-operative Co-evolution}
+\thispagestyle{empty}
+\section{Engineering Optimization}
+
+% - Classification - Application - Limitation -
+Optimization can be defined mathematically the search of the best decision or design variables in the search space $R^n$ while answering the objective function $f_i(x)$ and equality $\phi_j(x)$ and inequality constraints $\psi_k(x)$ \cite{yang2010}. Generic form of optimization can be written mathematically
+\noindent \begin{alignat}{3}minimize\: x\in R^n \qquad & f_i(x), & \qquad(i = 1, 2, ..., M), \\
+subject\: to\qquad & \phi_j(x) = 0,  & (j = 1, 2, ..., J),  \\
+ & \psi_k(x) \leqslant 0, & (k = 1, 2, ..., K), 
+\end{alignat}
+%\begin{tabularx}{\textwidth}{ lll }
+%minimize $x\in R^n$ & $f_i(x)$, & $(i = 1, 2, ..., M),$ \\
+%subject to & $\phi_j(x) = 0, $ & $(j = 1, 2, ..., J), $ \\
+% & $\psi_k(x) \leqslant 0,$ & $(k = 1, 2, ..., K), $ \\
+%\end{tabularx}
+where $f_i(x)$, $\phi_j(x)$ and $\psi_k(x)$ are function of the design vector 
+$x = {(x_1, x_2, ..., x_n)}^T$
+
+\begin{table}
+\caption{Meta-heuristic algorithms}
+\label{metaheuristic}
+\begin{tabularx}{\textwidth}{ X l r }
+%\hline
+\toprule
+  Algorithms & Authors & Year \\
+%  \hline
+\midrule
+  Genetic algorithms & Holland & 1975 \\ %\cite{holland1975} \\
+  Simulated annealing &   Kirkpatrick et al. &   1983  \\ %\cite{kirkpatrick83}
+  Ant colony &  Marco Dorigo& 1992 \\ %\cite{colorni1991}\\
+  Particle swarm    & James Kennedy and Russell Eberhart    & 1995\\ %eberhart1995
+  No-free-lunch theorems &  D. H. Wolpert and W.G. Macready  & 1997 \\% \cite{wolpert1997}
+  Harmony search &  Z. W. Geem et al. & 2001 \\ %\cite{geem2001}
+  Honey bee  &  C. Tovey and S. Nakrani& 2004\\ %\cite{nakrani2004honey}
+  Artificial Bee Colony  &  D. Karaboga & 2005\\ %\cite{karaboga2005idea}
+  Firefly algorithm  & Xin-She Yang & 2008\\% \cite{yang2009firefly}
+%  \hline
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Classification of optimization problems can be based on the objective, constraint, landscape, functions form, variables, and determinacy. Depending on the complexity of the problem, only some optimization algorithms are suitable. In case of stochastic problem (uncertainty and noise in the design variables and the objective functions and/or constraints), standard optimization techniques need to be redefined in combination with statistics. Deterministic algorithms are conventionally suitable for solving linear optimization while stochastic algorithms can solve more difficult optimization problems in a reasonable amount of time. Metaheuristic algorithms perform even better than heuristic approach based on some abstractions of nature. The advantages of these nature-inspired algorithms are based on selection of the best solution, thus convergence to optimality, and randomization which avoid trapping in local optima and ensure diversity of the solution. 
+
+The efficiency of an algorithm is largely determined by their complexity. The algorithm complexity is often denoted by the order notations such as $O(n\log{n})$ or $O(n^2)$, knowing $n$ the size of the problem or input size, but the details of this topic is beyond the scope of this research. Common metaheuristic algorithms listed in chronological order in table \ref{metaheuristic} do not infer that older techniques become obsolete over years but increase diversity in order to become hopefully suitable candidates in reducing NP-hard problems(non-deterministic polynomial-time) which are still unsolvable in many real applications. This is a class of computational complexity problem where solution cannot be found in polynomial time relative to input size. 
+Finally, although averaging the efficiency of different algorithms based on \emph{No Free Lunch Theorems} proves no better algorithm than another, it is always important to choose the most efficient algorithms to solve a particular problem. 
+
+%Problem functions,; Linear optimization problems can be solved using many gradient-based and gradient-free method,...; In some extreme cases, objective functions do not have explicit form, or at least it cannot be easily ... with the design variables.; Heuristic and Meta-heuristic algorithms are designed to deal with non linearity and multi-modality.  Most of these algorithms are nature inspired or bio-inspired as ...; Heuristic use trial-and-error, learning-and-adaptation to solve problem. ; "No free lunch": a universally efficient algorithm does not exist.; Only to choose the best for a given task.; Kennet A Dejong 1975 discussed GA support despite noisy, multimodal or discontinuity. Tough combinatorial optimization. ; Peter Biennet $->$ No crossover ; Although this huge number of algorithms is tiring to understand and apply, ...need to verify with some standard math function. (?ref who?)
+
+\section{Genetic Algorithms}
+\subsection*{Procedure}
+%\textbf{Contents:}
+%\emph{- History - Procedure - Selection - Operator - Extension}
+
+%\textbf{Keywords:}
+%\emph{candidate solution, encoding a problem, theoretical justification, search and learning method, encoding: binary, characters, real numbers, tree; empirical comparison, the performance depends on very much of the problem and the details of the GA, most research is currently done by guessing at an appropriate encoding and then trying on a particular version of the GA on it, linkage problem, inversion did not change the fitness of solution, how to gravitate the solution to $\alpha = 1$? , systematic/educated guess, crossover template/ evolving crossover hotspot, too weak vs. too strong selection (p166), exploitation vs. exploration.}
+
+Genetic algorithms (GA) were invented primarily to understand the mechanism of natural evolution/adaptation. The discovery of genetic operators distinguish themselves from evolutionary computation where mutation only requires one single parent and one child. Crossover, however, present a unique feature of GA which recombine both characteristics in two parents in order to reproduce the following population and hopefully, they fit better to the environment \cite{mitchell97}.
+
+General procedure of genetic algorithms is simple but GA practitioners may face difficulties in encoding design variables into biological chromosomes, at early stage, as well as selecting the right set of parameters to solve optimization problems efficiently. This task is left to problem specific because it is not possible to fix the best set of parameters for every case. Termination condition can be set either based on the number of maximum generation or the convergence of the fitness value. General procedure of genetic algorithm can be described in pseudocode \ref{alg:ga}. Starting from a random population, the evolution continues as following: 
+%\begin{enumerate}[leftmargin=\dimexpr 14pt+0.63in]
+\begin{enumerate}%[label=\itshape\alph*\upshape)]
+\item Initialize a population
+\item Evaluate individual's fitness
+\item Select potential parents: elitism, stochastic, rank, ...
+\item Add genetic operator: inversion, mutation, crossover
+\item Back to step 2 until termination condition %(reaching \textit{max generation} or acceptable fitness value)
+\end{enumerate}
+%\end{enumerate}
+
+\bigskip
+\begin{algorithm}[h]
+ \SetAlgoLined
+% \KwData{Experimental damage $\alpha_i$}
+% \KwResult{Predicted damage $\beta_i$}
+% \KwParm{truss properties}
+ gen = 0 \;
+ Pop(gen) = randomly initialized population \;
+ evaluate fitness of each individual in Pop(gen) \;
+ \While{termination condition = false}{
+  gen = gen + 1 \;  
+  select Pop(gen) from Pop(gen-1) based on fitness \;
+  apply genetic operator to Pop(gen) \;
+  evaluate fitness of each individual in Pop(gen)
+ }
+ \caption{Traditional GA}
+ \label{alg:ga}
+\end{algorithm}
+
+Fixed-length, fixed-order bit strings are common encoding techniques in most application: binary encodings, character and real-valued encodings, and tree encodings. It is not possible to choose the best encoding for a particular problem. Although original theory focused more on basic binary encoding schema, later extensions and other kinds of encodings allow more natural representation to real problems. Inversion, evolving crossover hot-spot, and messy GAs are common examples of adaption to GAs.
+
+\subsection*{Selection methods}
+
+After encoding design variables into biological chromosomes, the evolution takes place by selecting the best individuals from the current population for mating. However, the solution may be trapped in local optima if it converge too early, or the search is open ended if the candidates are never accepted after sufficient number of generation. No fixed parameters ensure the efficiency of the algorithms but there must be balance between exploitation and exploration. These selection methods (Table \ref{selection_methods}) often require experience and trial-and-error to choose the right combination as well as the right parameters. Some selection method can behave similarly to simulated annealing by varying these parameters between generations
+
+\begin{table}[ht]
+\caption{Selection methods}
+\label{selection_methods}
+\begin{tabularx}{\textwidth}{lX}
+%\hline
+\toprule
+  Selection & Description \\
+%  \hline
+\midrule
+Fitness-proportionate & Each individual earns a probability to reproduce based on their fitness, prevent premature convergence\\
+Sigma Scaling & Maps raw values to expected values to avoid premature convergence, limit reproduction by highly fit individual \\
+Elitism & Retains a number of the best individual\\
+Boltzman & Similar to simulated annealing, continuously varying temperature, controls the rate of selection\\
+Rank selection & Prevents too quick convergence, depends on rank not on absolute fitness\\
+Tournament selection & 
+Only requires a single pass, thus computationally more efficient than rank selection \\
+Steady State selection & Controls generation gap, only few individuals are replaced\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{Genetic Operators}
+Selection process only picks certain individuals to produce the population of the next generation. Genetic operator modify however the combination of individuals' chromosome. The location of recombination or mutation must be defined by earlier by its probability. Figure \ref{fig:ga_operator} details graphically the production of new chromosome based on these operators \cite{mitchell97}.
+
+\paragraph{Mutation} is a unary variation operator, which means a single parent is responsible to reproduce an offspring by, supposedly causing a random, unbiased change. \emph{Fresh blood} in the gene pool avoid early local convergence. It has therefore theoretical role to ensure connection in search space. This is the only operator in evolutionary programming. 
+
+\paragraph{Crossover} is a binary variation operator. It is the only operator in genetic programming. Recombination with higher arity is mathematically possible but has no biological equivalent. An offspring is obtained by combining two individual with different but desirable features. 
+
+\paragraph{Other operators and mating strategies} include inversion and gene doubling and several operators for preserving diversity in the population. The main purpose is not to overpopulate within a single specie, theoretically the solution may fall into a local optima. Matings between similar individuals are therefore restricted.
+
+\begin{figure}[h]%[hbtp]
+\centering
+\includegraphics[scale=1]{ga_operator.png}
+\caption{Genetic operators}
+\label{fig:ga_operator}
+\end{figure}
+
+\paragraph{Operators used in this project} to be described in Chapter 3
+
+\section{Cooperative Coevolutionary Genetic Algorithms}
+\label{sec:ccga}
+%\{Procedure, Proof, Previous works in damage detection\}
+%\{Pseudocode of GA and CCGA-1 \cite{potter1994}\}
+
+Cooperative coevolution was designed firstly to prove better performance than conventional genetic algorithms. Then it should be also applicable in other evolutionary algorithms. This concept was distinguished from the competition within subpopulation such as parallel GAs \cite{grosso1985} and distributed GAs \cite{whitley1990}. Cooperative coevolution takes place based on the following conventions:
+% [ref to page 2, par 07]
+\begin{enumerate}
+\item division of the population into species
+\item assembly of representative members of each of the species to form the complete solutions
+\item credit assignment at the species level based on the fitness of the complete solutions
+\item evolution of the number of species if required
+\item evolution of each species by standard genetic algorithm
+\end{enumerate}
+
+\bigskip
+\begin{algorithm}[h]
+ \SetAlgoLined
+% \KwData{Experimental damage $\alpha_i$}
+% \KwResult{Predicted damage $\beta_i$}
+% \KwParm{truss properties}
+ gen = 0 \;
+ \ForEach{specie s}{
+  $Pop_s(gen)$ = randomly initialized population\;
+  evaluate fitness of each individual in $Pop_s(gen)$\;
+ }
+ \While{termination condition = false}{
+  gen = gen + 1 \;  
+   \ForEach{specie s}{   
+	  select $Pop_s(gen)$ from $Pop_s(gen-1)$ based on fitness \;
+	  apply genetic operator to $Pop_s(gen)$ \;
+	  evaluate fitness of each individual in $Pop_s(gen)$\;
+  }
+ }
+ \caption{CCGA}
+\end{algorithm}
