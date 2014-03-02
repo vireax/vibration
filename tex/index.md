@@ -17,6 +17,7 @@ Nothing this only for backend TeX source
 
 `Main.tex`
 
+<div>
 <pre><code>
 \documentclass[12pt,a4paper,oneside, final]{book}
 %\usepackage{hyperref}
@@ -88,4 +89,4 @@ Vireak Kim}
 
 \end{document}
 
-</code></pre>
+</code></pre></div>
