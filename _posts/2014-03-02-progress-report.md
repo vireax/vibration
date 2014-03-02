@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Progress Report
+title: "Progress report"
 date: 2014-03-02
 ---
 
@@ -10,20 +10,20 @@ Coefficient of subgrade reaction is in MPa/m or N/m^2/m. There is not document e
 
 Anyway, below is the result from unit test by vibrating the structure with elastic support and under loading condition
 
-![vibration_elastic_support](http://oi60.tinypic.com/20fyf75.jpg "Vibrate Elastic Support")
+![vibration elastic support](http://oi60.tinypic.com/20fyf75.jpg "Vibrate Elastic Support")
 
-![vibrate_result](http://oi57.tinypic.com/5bxx50.jpg "Vibrate Result")
+![vibrate result](http://oi57.tinypic.com/5bxx50.jpg "Vibrate Result")
 
 ## Numerical Tests ##
 
 ### 1. Rao, 2004, 2D structure, 11 members, 6 nodes ##
 
-(http://oi57.tinypic.com/2s67q7s.jpg)
+![image](http://oi57.tinypic.com/2s67q7s.jpg "2D structures, simply support")
 
 ### 2. Nam Il Kim, 2013, 2D structure, elastic support, 16 members, 8 nodes ###
 
-(http://oi57.tinypic.com/x8zva.jpg)
+![image](http://oi57.tinypic.com/x8zva.jpg "2D structure, elastic support")
 
 ### 3. Nam Il Kim, 2013, 3D structure, elastic support, 36 members, 12 nodes ###
 
-(http://oi58.tinypic.com/a32i42.jpg)
+![image](http://oi58.tinypic.com/a32i42.jpg "3D structure, elastic support")
