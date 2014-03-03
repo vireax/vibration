@@ -17,8 +17,7 @@ Nothing this only for backend TeX source
 
 `Main.tex`
 
-<div>
-<pre><code>
+{{ highlight }}
 \documentclass[12pt,a4paper,oneside, final]{book}
 %\usepackage{hyperref}
 %\hypersetup{colorlinks=false}
@@ -89,4 +88,5 @@ Vireak Kim}
 
 \end{document}
 
-</code></pre></div>
+
+{{ endhighlight }}
