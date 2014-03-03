@@ -42,6 +42,7 @@ padding:10px; font-size:.8em;line-height:1.2em; float:right;}
 	labels: ["step","01", "02", "03", "04", "05", "06", "07", "08", "09", "10","11"],
 	width:540,
 	height:400,
+	delimiter:"	",
 	//'Damage Index':{axis:{}},
 	xlabel:'Iteration',
 	ylabel: 'Damage Indexes (BETA)',
