@@ -33,6 +33,7 @@ Actual measurements require correct placement of sensors for sufficient level of
 
 Better performance over conventional genetic algorithms suggests therefore potential representation and resolution of higher complexity problems. Recent damage detection in beam (Panigrahi, Chakraverty, & Mishra, 2009) is the core motivation of the second objective. The authors included random noise of 2% in natural frequency and 3% in mode shapes to good agreement of genetic algorithms in identifying damaged and undamaged cases with and without noise. Experimental noise possibly defects the prediction of damage but this problem can never be avoided in practice; examples are irregularity in the body, thermal stress, instrumentation error, etc. If the prediction gives a higher level of accuracy, it should also return better prediction even if are introduced experimental noises. The accuracy of this case clearly cannot be deducted from the performance of the damage identification algorithm alone, CCGA of course, because measurement error occurred earlier than the identification process. However, The algorithm should cover an acceptable range of noise level in order to predict the damage reliably.
 
+
 ```
 ## Background
 * CCGA was proven better than GA
