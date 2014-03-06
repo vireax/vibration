@@ -39,6 +39,7 @@ title: Draft
 
 #### [Chapter 5 Conclusion](ch5.html) ####
 
+#### [References](ref.md) ####
 
 ## Revision ##
 
