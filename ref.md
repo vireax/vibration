@@ -3,7 +3,6 @@ layout: page
 title: References
 ---
 
-# References
 
 Kim, N. I., & Lee, J. (2013). Damage Identification of Trusses with Elastic Supports Using FEM and Genetic Algorithm. *Advances in Mechanical Engineering, 2013*.
 
