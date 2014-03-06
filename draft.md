@@ -10,10 +10,12 @@ title: Draft
 *	Scope
 *	Significance
 *	Literature reviews
+	*	Vibration based damage detection
+	*	CCGA
+	*	Major related researches
 
 #### [Chapter 2 Co-operative Co-evolutionary Genetic Algorithms](ch2.html) ####
 
-*	Optimization
 *	Genetic algorithms
 *	Selection
 *	Genetic operators
@@ -21,11 +23,14 @@ title: Draft
   
 #### [Chapter 3 Numerical Test](ch3.html) ####
   
+*	Overview
+*	Vibration
 *	Procedure - Obj 1
 *	Procedure - Obj 2
 *	Test cases
 	*	Planar truss
 	*	Space truss
+*   Summary
 
 #### [Chapter 4 Results and Discussions](ch4.html) ####
  
@@ -35,9 +40,6 @@ title: Draft
 #### [Chapter 5 Conclusion](ch5.html) ####
 
 
-## Todo ##
+## Revision ##
 
-*	program elastic support
-*	draft ch3
-*	draft ch4
-*	submit all
+* 2014-03-06	init draft
