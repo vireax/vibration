@@ -338,12 +338,7 @@ padding-left: 50px;
 
 /* Custom */
 .toc { padding:1em; background:#fff; position:fixed, top:0; font-size:small;}
-.index-post-date {
-	display:inline-block;
-	width:6em;
-	text-align:right;
-	margin-right:1em;	
-}
+.index-post-date {display:inline-block;	width:6em;text-align:right;margin-right:1em;}
 ul.list-of-posts{list-style:none;}
 #accordion .ui-widget {  font-size:1em;}
 #accordion .ui-helper-reset{	line-height:1.8;}
@@ -354,6 +349,13 @@ div.pagination {text-align:center}
 div.pagination .page_number {}
 div.pagination .previous{float:right;}
 div.pagination .next{float:left;}
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
 @media print, screen and (max-width: 960px) {
 
