@@ -1,24 +1,42 @@
 ---
 layout: page
-title: Chapter 4 - Numerical Test
+title: Chapter 4 - RESULTS AND DISCUSSIONS 
 ---
 
-## Test cases
 
-### 2D
+## Damage identification
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel porttitor lectus. Integer sodales tincidunt nisi sed fermentum. Morbi eget nulla quis arcu sagittis dictum. Etiam ligula leo, dapibus eu elit sed, fringilla consequat eros. Aliquam ipsum est, fringilla a ante ac, sagittis dignissim dui. Nunc condimentum posuere rhoncus. Vivamus porttitor, dui et aliquam posuere, urna tortor ultricies est, at placerat elit tortor non ipsum. Donec condimentum magna sed ipsum ultricies interdum.
+> Chart  
+> Table  
+> Observation  
 
-### 3D
+| Truss structures | 1 (Rao, 2004)  | 2 (Kim, 2013)  |  3 (Kim, 2013)  |
+| --------- | -------------- | -------------- | --------------- |
+| Nb. members  | 11  | 16  | 36 |
+| Nb. nodes  | 6  | 8 |  12 |
+| Case a | undamaged, alpha(i) = 1 | undamaged | undamaged |
+| Case b | partial damage: alpha(3) = 0.7, alpha(6)=0.3 | partial damage: alpha(?) = ?, alpha(?)=? | partial damage: alpha(?) = ?, alpha(?)=?  | 
+| Case c | alpha(10) = 0 | partial damage: alpha(?) = ?, alpha(?)=?  | partial damage: alpha(?) = ?, alpha(?)=?  |
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel porttitor lectus. Integer sodales tincidunt nisi sed fermentum. Morbi eget nulla quis arcu sagittis dictum. Etiam ligula leo, dapibus eu elit sed, fringilla consequat eros. Aliquam ipsum est, fringilla a ante ac, sagittis dignissim dui. Nunc condimentum posuere rhoncus. Vivamus porttitor, dui et aliquam posuere, urna tortor ultricies est, at placerat elit tortor non ipsum. Donec condimentum magna sed ipsum ultricies interdum.
+### 2D Rao
 
-## Objective 1
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel porttitor lectus. Integer sodales tincidunt nisi sed fermentum. Morbi eget nulla quis arcu sagittis dictum. Etiam ligula leo, dapibus eu elit sed, fringilla consequat eros. Aliquam ipsum est, fringilla a ante ac, sagittis dignissim dui. Nunc condimentum posuere rhoncus. Vivamus porttitor, dui et aliquam posuere, urna tortor ultricies est, at placerat elit tortor non ipsum. Donec condimentum magna sed ipsum ultricies interdum.
+![Rao, 1a](http://vireax.github.io/vibration/fig201403/prediction1a.png)
+![Rao, 1b](http://vireax.github.io/vibration/fig201403/prediction1b.png)
+![Rao, 1c](http://vireax.github.io/vibration/fig201403/prediction1c.png)
 
-## Objective 2
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel porttitor lectus. Integer sodales tincidunt nisi sed fermentum. Morbi eget nulla quis arcu sagittis dictum. Etiam ligula leo, dapibus eu elit sed, fringilla consequat eros. Aliquam ipsum est, fringilla a ante ac, sagittis dignissim dui. Nunc condimentum posuere rhoncus. Vivamus porttitor, dui et aliquam posuere, urna tortor ultricies est, at placerat elit tortor non ipsum. Donec condimentum magna sed ipsum ultricies interdum.
+### 2D Kim
+![Kim, 2a](http://vireax.github.io/vibration/fig201403/prediction2a.png)
+![Kim, 2b](http://vireax.github.io/vibration/fig201403/prediction2b.png)
+![Kim, 2c](http://vireax.github.io/vibration/fig201403/prediction2c.png)
 
-## Testing LaTeX
+### 3D, Nam Il Kim
 
-$$ \begin{aligned} \dot{x} & = \sigma(y-x) \\ \dot{y} & = \rho x - y - xz \\ \dot{z} & = -\beta z + xy \end{aligned} $$
+![Kim, 3a](http://vireax.github.io/vibration/fig201403/prediction3a.png)
+![Kim, 3b](http://vireax.github.io/vibration/fig201403/prediction3b.png)
+![Kim, 3c](http://vireax.github.io/vibration/fig201403/prediction3c.png)
+
+## Noise
+
+> Chart  
+> Table  
+> Observation  
