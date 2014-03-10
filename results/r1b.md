@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Result\:Rao 2D 1b"
+title: "Result:Rao 2D 1b"
 ---
 
 <script type="text/javascript" src="dygraph-combined.js"></script>
