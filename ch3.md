@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Chapter 3 - NUMERICAL TESTS
+title: Chapter 3
 ---
+
+# NUMERICAL TESTS #
 
 *Overviews*
 
