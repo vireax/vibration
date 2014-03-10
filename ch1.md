@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Chapter 1 - Introduction
+title: Chapter 1
 ---
+
+# INTRODUCTION #
 
 ## 1.1 Background
 
