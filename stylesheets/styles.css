@@ -364,8 +364,7 @@ pre {
 #graphdiv .dygraph-ylabel { font-size: 18px; text-shadow: -2px 2px 2px gray; }
 /*.chart { border: 1px dashed black; margin: 5px 5px 5px 50px; padding: 2px; }	*/
 .chart { border: 1px dashed black; margin: 0; padding: 0px; }	
-#labels {border-bottom:1px solid #aaa;	width:100px;margin:0; 
-padding:10px; font-size:.8em;line-height:1.2em; float:right;}
+#labels {border-bottom:1px solid #aaa;	width:100px;margin:0; padding:10px; font-size:.9em;line-height:1.2em; float:right;}
 
 
 @media print, screen and (max-width: 960px) {
