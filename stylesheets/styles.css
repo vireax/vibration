@@ -356,6 +356,17 @@ pre {
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+/* Dygraph chart for result */
+#wrap {width:680px; margin:0 auto;text-align:left;padding:20px 0;background:none;} 
+#graphdiv {background:#fff; padding:0px; border:1px solid #ccc;float:left;}
+#graphdiv .dygraph-label { font-family: Georgia,Verdana,serif; }
+#graphdiv .dygraph-title { font-size: 36px; text-shadow: 2px 2px 2px gray; }
+#graphdiv .dygraph-ylabel { font-size: 18px; text-shadow: -2px 2px 2px gray; }
+/*.chart { border: 1px dashed black; margin: 5px 5px 5px 50px; padding: 2px; }	*/
+.chart { border: 1px dashed black; margin: 0; padding: 0px; }	
+#labels {border-bottom:1px solid #aaa;	width:100px;margin:0; 
+padding:10px; font-size:.8em;line-height:1.2em; float:right;}
+
 
 @media print, screen and (max-width: 960px) {
 
