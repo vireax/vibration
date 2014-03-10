@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Rao 2D 2a
+title: Kim 2D 2a
 date: 2014-02-24
 ---
 
