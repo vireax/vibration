@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Chapter 2 - CO-OPERATIVE CO-EVOLUTION
+title: Chapter 2
 ---
+
+# CO-OPERATIVE CO-EVOLUTION #
 
 > A paragraph explaining organization of the chapter
 
