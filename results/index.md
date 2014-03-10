@@ -26,7 +26,7 @@ title: Numerical Test Results
 
 ## 3D structure (Kim, 2013)
 
-![Case 3](http://vireax.github.io/vibration/fig201403/truss3.png)
+![Case 3](http://oi43.tinypic.com/2e397bq.jpg)
 
 36 elements, 12 nodes
 
