@@ -25,22 +25,24 @@ mbs.txt
 
 ### 1. 2D Structure (Rao, 2004)
 
-  a. alpha = ones(11,1)
-  b. alpha = ones(11,1), alpha(3) = ... , alpha(6) = ...
-  c. alpha = ones(11,1), alpha(10) = 0
+  a. alpha = ones(11,1)  
+  b. alpha = ones(11,1), alpha(3) = ... , alpha(6) = ...  
+  c. alpha = ones(11,1), alpha(10) = 0  
   
 ### 2. 2D Structure with elastic support (Kim, 2013)
 
-  a. alpha = ones(16,1)
-  b. alpha = ones(16,1), alpha(9) = 0.3
-  c. alpha = ones(16,1), alpha(5)= 0.4, alpha(13) = 0.3
+  a. alpha = ones(16,1)  
+  b. alpha = ones(16,1), alpha(9) = 0.3  
+  c. alpha = ones(16,1), alpha(5)= 0.4, alpha(13) = 0.3  
   
 ### 3. 3D Structure with elastic support (Kim, 2013)
-  a. alpha = ones(36,1)
-  b. alpha = ones(36,1), alpha(13) = 0.4
-  c. alpha = ones(36,1), alpha(1) = 0.3, alpha(21) = 0.5
 
+  a. alpha = ones(36,1)  
+  b. alpha = ones(36,1), alpha(13) = 0.4  
+  c. alpha = ones(36,1), alpha(1) = 0.3, alpha(21) = 0.5  
 
-## Tests - objective 2
+## Charts
 
--  Test from -3% to +3%
+- http://vireax.github.io/vibration/results/r1.html
+- http://vireax.github.io/vibration/results/r2.html
+- http://vireax.github.io/vibration/results/r3.html
