@@ -50,10 +50,10 @@ alpha = ones(size(mbs,1),1); %      Init and all case A
 
 View chat: [1](/vibration/results/r1.html), [2](/vibration/results/r2.html), [3](/vibration/results/r3.html)
 
-> placeholder for numerical result
-> - result 1
-> - result 2
-> - result 3
+> placeholder for numerical result  
+> - result 1  
+> - result 2  
+> - result 3  
 
 ## Objective 2: With experimental noise
 
