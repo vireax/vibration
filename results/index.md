@@ -13,7 +13,7 @@ title: Numerical Test
 
 ![Case 2](http://vireax.github.io/vibration/fig201403/truss2.png)
 
-## 3D structure (Kim, 2013)
+### 3. 3D structure (Kim, 2013)
 
 ![Case 3](http://oi43.tinypic.com/2e397bq.jpg)
 
@@ -48,7 +48,12 @@ alpha = ones(size(mbs,1),1); %      Init and all case A
 
 ## Objective 1: Damage detection
 
-> lorem ipsum
+View chat: [1](/vibration/results/r1.html), [2](/vibration/results/r2.html), [3](/vibration/results/r3.html)
+
+> placeholder for numerical result
+> - result 1
+> - result 2
+> - result 3
 
 ## Objective 2: With experimental noise
 
