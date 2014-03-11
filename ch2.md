@@ -5,7 +5,9 @@ title: Chapter 2
 
 # CO-OPERATIVE CO-EVOLUTION #
 
-> A paragraph explaining organization of the chapter
+*A paragraph explaining organization of the chapter*
+
+In order to solve damage detection problem using co-operative co-evolutionary gentic algorithms, prior knowledge of conventional genetic algorithms, encoding, selection method, and reproduction should provide a baseline into programming ccga. Based on the concept of evolution within species and finite element analysis of vibration in truss structure, numerical tests in the next chapter should provide practical approach for comparison with previous works on similar structure.
 
 ## 2.1 Genetic algorithm ##
 
@@ -13,21 +15,39 @@ title: Chapter 2
 > principle  
 > application in computing  
 
-Genetic algorithms (GA) were invented primarily to understand the mechanism of natural evolution/adaptation. The discovery of genetic operators distinguishes themselves from evolutionary computation where mutation only requires one single parent and one child. Crossover, however, presents a unique feature of GA which recombine both characteristics in two parents in order to reproduce the following population and hopefully, they fit better to the environment (Mitchell, 1998). General procedure of genetic algorithms is simple but GA practitioners may face difficulties in encoding design variables into biological chromosomes, at early stage, as well as selecting the right set of parameters to solve optimization problems efficiently. This task is left to problem specific because it is not possible to fix the best set of parameters for every case. Termination condition can be set either based on the number of maximum generation or the convergence of the fitness value. General procedure of genetic algorithm can be described in pseudocode \ref{alg:ga}. Starting from a random population, the evolution continues as following: 
+Genetic algorithms (GA) were invented primarily to understand the mechanism of natural evolution/adaptation. The discovery of genetic operators distinguishes themselves from evolutionary computation where mutation only requires one single parent and one child. Crossover, however, presents a unique feature of GA which recombine both characteristics in two parents in order to reproduce the following population and hopefully, they fit better to the environment (Mitchell, 1998). General procedure of genetic algorithms is simple but GA practitioners may face difficulties in encoding design variables into biological chromosomes, at early stage, as well as selecting the right set of parameters to solve optimization problems efficiently. This task is left to problem specific because it is not possible to fix the best set of parameters for every case. Termination condition can be set either based on the number of maximum generation or the convergence of the fitness value. General procedure of genetic algorithm can be described in pseudocode. Starting from a random population of the first generation, the evolution continues as following: 
 
-- Initialize a population 
-- Evaluate individual's fitness 
-- Select potential parents: elitism, stochastic, rank, ... 
-- Add genetic operator: inversion, mutation, crossover 
-- Back to step 2 until termination condition (reaching maximum number of generation or acceptable fitness value) 
+1. Initialize a population 
+2. Evaluate individual's fitness 
+3. Select potential parents: elitism, stochastic, rank, ... 
+4. Add genetic operator: inversion, mutation, crossover 
+5. Back to step 2 until termination condition (reaching maximum number of generation or acceptable fitness value) 
 
 The termination condition can be either the calculation reaches a predefined maximum number of generations or the fitness value converges toward certain value. Fixed-length, fixed-order bit strings are common encoding techniques in most application: binary encodings, character and real-valued encodings, and tree encodings. It is not possible to choose the best encoding for a particular problem. Although original theory focused more on basic binary encoding schema, later extensions and other kinds of encodings allow more natural representation to real problems. Inversion, evolving crossover hot-spot, and messy GAs are common examples of adaption to GAs. 
 
 ## 2.2 Chromosome encoding ##
 
-> binary  
-> string  
-> real  
+> binary, string, real
+
+[ref: mitchel, 98]
+- GAs perform not very well with unimodal function
+- binary schema is unnatural
+- binary > gray, diploi
+- string length vs. degree of implicit parallelism
+- performance depends on problem and the detail of GA
+- tree encoding schemes > GP > open-ended
+- paradox
+
+
+
+
+
+
+
+
+
+
+
 
 ## 2.3 Selection ##
 
