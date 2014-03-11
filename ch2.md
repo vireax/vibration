@@ -5,7 +5,7 @@ title: Chapter 2
 
 # CO-OPERATIVE CO-EVOLUTION #
 
-*A paragraph explaining organization of the chapter*
+> A paragraph explaining organization of the chapter
 
 In order to solve damage detection problem using co-operative co-evolutionary gentic algorithms, prior knowledge of conventional genetic algorithms, encoding, selection method, and reproduction should provide a baseline into programming ccga. Based on the concept of evolution within species and finite element analysis of vibration in truss structure, numerical tests in the next chapter should provide practical approach for comparison with previous works on similar structure.
 
@@ -29,20 +29,21 @@ The termination condition can be either the calculation reaches a predefined max
 
 > binary, string, real
 
-(ref: mitchel, 98)
+reference - mitchel, 98
+
 - GAs perform not very well with unimodal function
 - binary schema is unnatural
 - binary > gray, diploi
 - string length vs. degree of implicit parallelism
 - performance depends on problem and the detail of GA
-- tree encoding schemes > GP > open-ended
+- tree encoding schemes - GP - open-ended
 - paradox
 
 ## 2.3 Selection ##
 
 > method  
 > criteria  
-> anything special ?
+> anything special 
 
 After encoding design variables into biological chromosomes, the evolution takes place by selecting the best individuals from the current population for mating. However, the solution may be trapped in local optima if the fitness value converges too early, or the search is open ended if the candidates are never accepted after sufficient number of generation. No fixed parameters ensure the efficiency of the algorithms but there must be balance between exploitation and exploration. These selection methods (Table 2) often require experience and trial-and-error to choose the right combination as well as the right parameters. Some selection method can behave similarly to simulated annealing by varying these parameters between generations.
 
@@ -64,6 +65,6 @@ Co-operative co-evolution was designed firstly to prove better performance than 
 
 ## 2.6 Approaches in vibration based damage detection ##
 
-> vibration > modal properties  
+> vibration - modal properties  
 > objective function  
 > findings  
