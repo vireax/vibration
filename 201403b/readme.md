@@ -1,4 +1,6 @@
-2014-03-11# Objective 2
+2014-03-11
+
+# Objective 2
 
 - test with 2% and 3% noise in frequencies and mod shape
 
@@ -22,4 +24,8 @@ Example: fitnessXYZ.png, betaXYZ.png, dataXYZ.txt, fitnessXYZ.txt
 3c7 87.935761 seconds.
 3c8 86.224329 seconds
 
+# Charts
 
+- http://vireax.github.io/vibration/results/n1.html
+- http://vireax.github.io/vibration/results/n2.html
+- http://vireax.github.io/vibration/results/n3.html
