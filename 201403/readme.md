@@ -8,18 +8,18 @@ The unit of coefficient of subgrade reaction is in [MPa/m] or [N/m^2/m]
 
 nds.txt 
 
- - position x3, 
- - constraints x3, 
- - spring stiffness x 3, 
- - load x 3
+- position x3, 
+- constraints x3, 
+- spring stiffness x 3, 
+- load x 3
 
 mbs.txt 
 
- - start node
- - end node
- - RO
- - E
- - A
+- start node
+- end node
+- RO
+- E
+- A
 
 ## Tests - Objective 1
 
