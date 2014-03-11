@@ -350,7 +350,7 @@ div.pagination {text-align:center}
 div.pagination .page_number {}
 div.pagination .previous{float:right;}
 div.pagination .next{float:left;}
-pre {
+pre-asdf {
  white-space: pre-wrap;       /* css-3 */
  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
  white-space: -pre-wrap;      /* Opera 4-6 */
