@@ -1,6 +1,4 @@
-2014-03-11
-
-# Objective 2
+2014-03-11# Objective 2
 
 - test with 2% and 3% noise in frequencies and mod shape
 
