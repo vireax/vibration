@@ -29,7 +29,7 @@ The termination condition can be either the calculation reaches a predefined max
 
 > binary, string, real
 
-[ref: mitchel, 98]
+(ref: mitchel, 98)
 - GAs perform not very well with unimodal function
 - binary schema is unnatural
 - binary > gray, diploi
@@ -37,17 +37,6 @@ The termination condition can be either the calculation reaches a predefined max
 - performance depends on problem and the detail of GA
 - tree encoding schemes > GP > open-ended
 - paradox
-
-
-
-
-
-
-
-
-
-
-
 
 ## 2.3 Selection ##
 
