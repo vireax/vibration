@@ -6,9 +6,8 @@
 
 # Changes from objective 1
 
-- add noise_vec and noise_val
+- add noise\_vec and noise\_val
 - use measure2() instead of measure() to generate random noise in each element of the matrices of the modal properties
-- 
 
 # Files
 
