@@ -57,6 +57,8 @@ View chat: [1](/vibration/results/r1.html), [2](/vibration/results/r2.html), [3]
 
 ## Objective 2: With experimental noise
 
+View chart: [1](/vibration/results/n1.html) - [2](/vibration/results/n2.html) - [3](/vibration/results/n3.html)
+
 1a
 
 <pre><code>
