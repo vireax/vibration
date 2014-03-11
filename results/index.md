@@ -23,9 +23,9 @@ title: Numerical Test
 | --------- | -------------- | -------------- | --------------- |
 | Nb. members  | 11  | 16  | 36 |
 | Nb. nodes  | 6  | 8 |  12 |
-| Case a | undamaged, alpha(i) = 1 | undamaged | undamaged |
-| Case b | partial damage: alpha(3) = 0.7, alpha(6)=0.3 | partial damage: alpha(9) = 0.7| partial damage: alpha(5) = 0.6, alpha(13) = 0.7  | 
-| Case c | alpha(10) = 0 | partial damage: alpha(13) = 0.6  | partial damage: alpha(1) = o.7, alpha(21) = 0.5  |
+| Case a | 1a. alpha(i) = 1 | 2a. undamaged (X) | 3a. undamaged (X) |
+| Case b | 1b. alpha(3) = 0.7, alpha(6)=0.3 | 2b. alpha(9) = 0.7| 3b. alpha(5) = 0.6, alpha(13) = 0.7  | 
+| Case c | 1c. alpha(10) = 0 | 2c. alpha(13) = 0.6  | 3c. alpha(1) = o.7, alpha(21) = 0.5  |
 
 <pre><code>
 alpha = ones(size(mbs,1),1); %      Init and all case A
@@ -58,6 +58,8 @@ View chat: [1](/vibration/results/r1.html), [2](/vibration/results/r2.html), [3]
 ## Objective 2: With experimental noise
 
 View chart: [1](/vibration/results/n1.html) - [2](/vibration/results/n2.html) - [3](/vibration/results/n3.html)
+
+Intoducing 2% and 3% error in frequencies and mode shapes
 
 1a
 
