@@ -3,38 +3,54 @@ layout: page
 title: Numerical Test
 ---
 
-## Damage detection
+## Structures
 
-### 2D structure (Rao et al., 2004)
+### 1. 2D structure (Rao et al., 2004)
 
 ![Case 1](http://vireax.github.io/vibration/fig201403/truss1.png)
 
-11 elements, 6 nodes
-
-- Case 1: undamaged
-- Case 2: partial damage
-- Case 3: missing 1 element from the structure
-
-## 2D structure (Kim, 2013)
+### 2. 2D structure (Kim, 2013)
 
 ![Case 2](http://vireax.github.io/vibration/fig201403/truss2.png)
-
-- Case 1
-- Case 2
-- Case 3
-
 
 ## 3D structure (Kim, 2013)
 
 ![Case 3](http://oi43.tinypic.com/2e397bq.jpg)
 
-36 elements, 12 nodes
+## Test cases
 
-- Case 1
-- Case 2
-- Case 3
+| Structures | 1 (Rao, 2004)  | 2 (Kim, 2013)  |  3 (Kim, 2013)  |
+| --------- | -------------- | -------------- | --------------- |
+| Nb. members  | 11  | 16  | 36 |
+| Nb. nodes  | 6  | 8 |  12 |
+| Case a | undamaged, alpha(i) = 1 | undamaged | undamaged |
+| Case b | partial damage: alpha(3) = 0.7, alpha(6)=0.3 | partial damage: alpha(9) = 0.7| partial damage: alpha(5) = 0.6, alpha(13) = 0.7  | 
+| Case c | alpha(10) = 0 | partial damage: alpha(13) = 0.6  | partial damage: alpha(1) = o.7, alpha(21) = 0.5  |
 
-## With experimental noise
+<pre><code>
+alpha = ones(size(mbs,1),1); %      Init and all case A
+
+% alpha(3) = 0.3; alpha(6) = 0.7; %   Rao case 1B
+% alpha(10) = 0; %                    Rao Case 1C
+ 
+% alpha(9) = 0.3; %                   Kim 2D case 2B >> Wrong
+% alpha(9) = 0.7; %                   Kim 2D case 2B >> Correct
+
+% alpha(5)=0.4; alpha(13)= 0.3; %     Kim 2D case 2C >> Wrong
+% alpha(5)=0.6; alpha(13)= 0.7; %     Kim 2D case 2C  >> Correct
+
+% alpha(13) = 0.4; %                  Kim 3D case 3B >> Wrong
+% alpha(13) = 0.6; %                  Kim 3D case 3B >> Correct
+
+% alpha(1) = 0.3; alpha(21) = 0.5; %   Kim 3D case 3C >> Wrong
+% alpha(1) = 0.7; alpha(21) = 0.5; %   Kim 3D case 3C >> Correct
+</code></pre>
+
+## Objective 1: Damage detection
+
+> lorem ipsum
+
+## Objective 2: With experimental noise
 
 1a
 
