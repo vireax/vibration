@@ -39,6 +39,12 @@ reference - mitchel, 98
 - tree encoding schemes - GP - open-ended
 - paradox
 
+Chromosome encoding is responsible in translating numerical variables into the convention of gene and allele, so that the biological reproduction can abstract out the construct of the problem and variables. Binary encoding scheme was first proposed (Holland, 1975) to mimic the composition of biological chromosome. Later on, gray and diploid encoding extend the (?) functionality of the algorithm/technique while (?...) compromising the string length and degree of implicit parallelism. 
+
+The difference in terms of performance between binary and real value encoding is still subjective to the implementation and the depth of use of the algorithms. Although mostly unnatural for engineering problems, both encoding technique still have their own strength and weaknesses.
+
+String or real value encodeing overcomes/breaks the restriction to continuous search space in previous technique.
+
 ## 2.3 Selection ##
 
 > method  
