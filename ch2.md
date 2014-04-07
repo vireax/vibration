@@ -84,16 +84,25 @@ The recombination of individual characteristics is a very essential role in orde
 
 Crossover is not the only feature strength of genetic algorithms. Mutation has the same ability for disruption of existing schemas, with crossover as amore robust construction of new schemas. it is therfore neccessary to consider correct balance among crossover, mutation, and selection. *The details of the fitness function and encoding are somehow the important factor in obtaining the correct balance among xover, mutation and selection*.
 
+> *figure _: genetic operator*
+
 Other less conventional operators are also available in the purpose of preserving diversity in the population. Thes include inversion, gene doubling, crowding, and speciation. A different way is to put restriction on mating by distinction of species, prevention of incest, and mating tags along chromosomes.
 
-One missing concept related to real-value encoding has been proposed as simulated binary crossover (SBX) operator (K. Deb, yyyy?). Variables in many engineering problems are encoded in real value. By ..., ..., ... GAs users should be able to focus on the problem solving rather than encoding from-and-to binary encoding.
+One latest concept related to real-value encoding has been proposed as simulated binary crossover (SBX) operator (K. Deb, yyyy?). Variables in many engineering problems are encoded in real value. By ..., ..., ... GAs users should be able to focus on the problem solving rather than encoding from-and-to binary encoding.
 
 ## 2.5 Co-operative co-evolution ##
 
 > extensions of GAs  
 > ccga by potter, 1994  
 
-Co-operative co-evolution was designed firstly to prove better performance than conventional genetic algorithms. Then it should be also applicable in other evolutionary algorithms. This concept was distinguished from the competition within sub population such as parallel GAs (Grosso, 1985) and distributed GAs (Whitley & Starkweather, 1990). Co-operative co-evolution takes place based on the following conventions (Potter & Jong, 1994): Division of the population into species Assembly of representative members of each of the species to form the complete solutions Credit assignment at the species level based on the fitness of the complete solutions Evolution of the number of species if required Evolution of each species by standard genetic algorithm
+Co-operative co-evolution was designed firstly to prove better performance than conventional genetic algorithms. Then it should be also applicable in other evolutionary algorithms. This concept was distinguished from the competition within sub population such as parallel GAs (Grosso, 1985) and distributed GAs (Whitley & Starkweather, 1990). Co-operative co-evolution takes place based on the following conventions (Potter & Jong, 1994)
+
+1. Division of the population into species 
+2. Assembly of representative members of each of the species to form the complete solutions 
+3. Credit assignment at the species level based on the fitness of the complete solutions 
+4. Evolution of the number of species if required Evolution of each species by standard genetic algorithm
+
+/*more review on ccga*/
 
 ## 2.6 Approaches in vibration based damage detection ##
 
