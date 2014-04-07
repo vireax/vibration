@@ -48,3 +48,32 @@ title: Chapter 4
 > Chart  
 > Table  
 > Observation  
+
+## 4.3 Discussions
+
+The results in Figure 1-7 indicates that co-operative co-evolutionary genetic algorithm can predict the damage effectively. 
+
+From the comparison tables, CCGA outperforms both convetional GA and microGA.
+
+CCGA proves better damage identification because, despite increased number of dimension and degree of freedom, the algorithms is supported by speciation which may in turn improve parallel search in manay species.
+
+However, *No Free Lunch Theorem in Optimization* can raise questionable proof whether there exist tuning parameters which worsen this performance. Although the results extend the precision of the predicted stiffness factor to 8 decimal points and CCGA always give best prediction, there should be some drawback caused by this algorithms. Possible direction in detection the inconvenience may be a close look into varying tuning parameters, increased degree of freedom, ....[list all parameters + ref] 
+
+### Summary review
+
+- methods are vast/huge/confusing/complicated
+- we tried to stick to the same models
+- it may not garantee the performance with other method, or the same computation method with different algorithm, or different type of structure
+- therefore, researcher may have to locate themself either in exploring an overall picture of the field for larger generalization, or study closely to a small topic for deep detail.
+- and therefore, we need not only supporting argument. If anyone can find the problem to respective method, the judgement would be more complete.
+
+### regarding noise
+
+The comparison tables suggest small difference between the predicted damage with and without noise. Although this simulation is preliminary, it should be possible to predict certain range of error in damage detection based on known/give error in the actual measurement of the structure. As tested in Panigrahi et al. (2009), we cannot claim that the program can predict accurate result despite error in measurement. Researchers should always be aware of uncertainty in the process. 
+
+/*If large error have no effect on the solution, there should be problematic*/
+
+By observing variation of values in modal properties by 2% and 3% noise range, absolute error at higher modes tend to be many times greater than the exact value in lower mode. After recombining the measurement with these errors in the residual matrix, the objective values tend to move further from zero. It should be possible to eliminate these errors by revising the mathematics of the objective function so that the uncertainty can be separately minimize without affecting ??? the evolution.
+
+One possible way in extending this observation, practitioners shouold be able to expand the range of noise in measurement and to collect the tolerance of the prediction by statistical approach. This work would be in one way relevant to industrial use, and in other way, *API* modular for experimenting different algorithms, models, and methods.
+
