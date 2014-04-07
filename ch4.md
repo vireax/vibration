@@ -23,31 +23,51 @@ title: Chapter 4
 
 ![Rao, 1a](http://vireax.github.io/vibration/fig201403/prediction1a.png)
 
+*Figure X: Case 1*
+
 ![Rao, 1b](http://vireax.github.io/vibration/fig201403/prediction1b.png)
 
+*Figure X: Case 2*
+
 ![Rao, 1c](http://vireax.github.io/vibration/fig201403/prediction1c.png)
+
+*Figure X: Case 3*
 
 ### 2D Kim
 
 ![Kim, 2a](http://vireax.github.io/vibration/fig201403/prediction2a.png)
 
+*not tested, to be removed*
+
 ![Kim, 2b](http://vireax.github.io/vibration/fig201403/prediction2b.png)
 
+*Figure X: Case 4*
+
 ![Kim, 2c](http://vireax.github.io/vibration/fig201403/prediction2c.png)
+
+*Figure X: Case 5*
 
 ### 3D, Nam Il Kim
 
 ![Kim, 3a](http://vireax.github.io/vibration/fig201403/prediction3a.png)
 
+*Not tested, to be removed*
+
 ![Kim, 3b](http://vireax.github.io/vibration/fig201403/prediction3b.png)
 
+*Figure X: Case 6*
+
 ![Kim, 3c](http://vireax.github.io/vibration/fig201403/prediction3c.png)
+
+*Figure X: Case 7*
 
 ## Noise
 
 > Chart  
 > Table  
 > Observation  
+
+/*add 7 tables here*/
 
 ## 4.3 Discussions
 
