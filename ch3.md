@@ -33,16 +33,16 @@ The summary table of the seven test cases (Table 1) concludes the stiffness fact
 
 > table 1: summary of test situation
 
-Case    |   elements    |   DoF |   Induced damage |
---------------------------------------------
-1 |  |  |  |
-2 |  |  |  |
-3 |  |  |  |
-4 |  |  |  |
-5 |  |  |  |
-6 |  |  |  |
-7 |  |  |  |
--------------------------------------------
+| Case    |   elements    |   DoF |   Induced damage |
+| ------- | ------------- | ----- | ---------------- |
+| 1 |  |  |  |
+| 2 |  |  |  |
+| 3 |  |  |  |
+| 4 |  |  |  |
+| 5 |  |  |  |
+| 6 |  |  |  |
+| 7 |  |  |  |
+| ------- | ------------- | ----- | ---------------- |
 
 ## 3.2 Objective function ##
 
@@ -118,7 +118,7 @@ The program was written based on the following procedure
 - plot figure of the prediction over generations
 
 
-> algorithm 1: damage detection
+*algorithm 1: damage detection*
 
 - read input
 - assign damage \alpha i
@@ -162,14 +162,14 @@ These parameters are obtained by trial and error to achieved satisfactory result
 
 > Table 2: parameters 
 
-Parameters  |   Values
----------------------
-generation | ..
-species | ..
-chromosome length | ..
-xover | ...
-mutation | ...
----------------------
+| Parameters  |   Values |
+| ----------- | --------- |
+| generation | .. |
+| species | .. |
+| chromosome length | .. |
+| xover | ... |
+| mutation | ... | 
+| ----------- | --------- |
 
 
 
@@ -177,7 +177,7 @@ mutation | ...
 
 Noise is always unavoidable in practice. Considering instrumentation, measurement, and data transfer; uncertainty should be kept minimal and to an acceptable tolerance [?]. In this research, CCGA might or might not be proven to be effective in damage detection. However, the performance of the algorithm should not be judge with the experimental noise. In this section random noise in the ranges of 2% and 3% in natural frequencies and mode shapes are included randomly into the exact measurement of modal properties. The evolution takes place following the same procedure as explained in previous section until reaching termination criteria. Maximum number of generation is used here as termination criteria.
 
-> Algorithm 2
+*Algorithm 2*
 
 - read input
 - assign damage \alpha i
