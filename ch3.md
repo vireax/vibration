@@ -15,13 +15,19 @@ Three truss structures selected from previous researches (Rao et al., 2004; Kim 
 
 The first truss model consists of 11 members, attached to 6 nodes, and supported by a simply support end/hinge and a roller type (Fig 1). Mechanical properties are modulus of elasticity (E = 207 GPa), density (\rho = 7860 kg), cross-sectional area (A = 0.0011 m^2), and length of each bay (l =  0.75 m). Three test cases were considered as a) an undamaged structure, b) partial damage in element 3 and 6, and c) complete damage in element 10.
 
+![Model 1](http://vireax.github.io/vibration/fig201403/truss1.png)
+
 > Figure 1 : truss 2D (M. A. Rao et al., 2004)
 
 The second model is also a planar truss with elastic support at one end in place the roller type. The structure consists of 16 elements and 8 nodes with the following properties: E = 70 MPa and A = 0.01 m^2 (Fig. 2). Simulation cases are a) partial damage in element 9 (\alpha-9 = 0.7), and b) partial damage in elements 5 and 13 ( \alpha-5 = 0.6, \alpha-3 = 0.7).
 
+![Model 2](http://vireax.github.io/vibration/fig201403/truss2.png)
+
 > Figure 2 : truss 2D (Kim et al., 2013)
 
 The third model represent a space truss consisting of 36 elements, 12 nodes, support by 3 simply support ends and elastic foundation on one end/elastic spring. Test cases are a) \alpha13 = 0.6 and b) alpha-1 = 0.7, alpha-21 = 0.5. The mechanical properties are consistent with the second model.
+
+![Model 3](http://oi43.tinypic.com/2e397bq.jpg)
 
 > Figure 3: truss 3D (Kim et al. 2013)
 
@@ -120,6 +126,7 @@ The program was written based on the following procedure
 
 *algorithm 1: damage detection*
 
+<pre><code>
 - read input
 - assign damage \alpha i
 - calculate \lambda and \phi
@@ -132,6 +139,7 @@ The program was written based on the following procedure
     - end
 - return fittest offsprings
 - end
+</code></pre>
 
 
 This program starts by retrieving nodes and elements properties from two comma separated value (CSV) files. Nodes' data contains spatial position, constraints, and loads in x, y, z direction as a standard procedure in finite lement program. Elements' data consist of indexes of starting and ending nodes, element's density (\rho), modulus of elasticity (E), and cross-sectional area (A). Although the three last variables are consistent in our test models, the program is made flexible to varying properties in each elements by modifying the input file only. The stored arrays are useful for further calculation inside the program without rereading repeatedly the input files.
