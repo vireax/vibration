@@ -35,13 +35,13 @@ The summary table of the seven test cases (Table 1) concludes the stiffness fact
 
 Case    |   elements    |   DoF |   Induced damage |
 --------------------------------------------
-1
-2
-3
-4
-5
-6
-7
+1 |  |  |  |
+2 |  |  |  |
+3 |  |  |  |
+4 |  |  |  |
+5 |  |  |  |
+6 |  |  |  |
+7 |  |  |  |
 -------------------------------------------
 
 ## 3.2 Objective function ##
@@ -119,7 +119,7 @@ The program was written based on the following procedure
 
 
 > algorithm 1: damage detection
-----------------------------------
+
 - read input
 - assign damage \alpha i
 - calculate \lambda and \phi
@@ -132,7 +132,7 @@ The program was written based on the following procedure
     - end
 - return fittest offsprings
 - end
-----------------------------------
+
 
 This program starts by retrieving nodes and elements properties from two comma separated value (CSV) files. Nodes' data contains spatial position, constraints, and loads in x, y, z direction as a standard procedure in finite lement program. Elements' data consist of indexes of starting and ending nodes, element's density (\rho), modulus of elasticity (E), and cross-sectional area (A). Although the three last variables are consistent in our test models, the program is made flexible to varying properties in each elements by modifying the input file only. The stored arrays are useful for further calculation inside the program without rereading repeatedly the input files.
 
@@ -164,11 +164,11 @@ These parameters are obtained by trial and error to achieved satisfactory result
 
 Parameters  |   Values
 ---------------------
-generation
-species
-chromosome length
-xover
-mutation
+generation | ..
+species | ..
+chromosome length | ..
+xover | ...
+mutation | ...
 ---------------------
 
 
@@ -178,7 +178,7 @@ mutation
 Noise is always unavoidable in practice. Considering instrumentation, measurement, and data transfer; uncertainty should be kept minimal and to an acceptable tolerance [?]. In this research, CCGA might or might not be proven to be effective in damage detection. However, the performance of the algorithm should not be judge with the experimental noise. In this section random noise in the ranges of 2% and 3% in natural frequencies and mode shapes are included randomly into the exact measurement of modal properties. The evolution takes place following the same procedure as explained in previous section until reaching termination criteria. Maximum number of generation is used here as termination criteria.
 
 > Algorithm 2
-----------------------------------
+
 - read input
 - assign damage \alpha i
 - calculate \lambda and \phi exact
@@ -192,7 +192,7 @@ Noise is always unavoidable in practice. Considering instrumentation, measuremen
     - end
 - return fittest offsprings
 - end
-----------------------------------
+
 
 The result will be collected for comparison with damage detection without noise. Figure of the evolution can be also plotted to illustrate visually the convergence of the prediction.
 
